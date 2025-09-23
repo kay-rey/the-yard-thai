@@ -42,7 +42,7 @@ alwaysApply: true
   ```bash
   pnpm dlx shadcn-ui@latest add [component-name]
   ```
-- Examples: `pnpm dlx shadcn-ui@latest add button`, `pnpm dlx shadcn-ui@latest add card`
+- Examples: `pnpm dlx shadcn@latest add button`, `pnpm dlx shadcn@latest add card`
 - Import and use shadcn/ui components in generated code
 - Customize shadcn/ui components using Tailwind classes
 
