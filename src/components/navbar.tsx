@@ -50,8 +50,8 @@ export default function Navbar() {
 			</div>
 
 			{/* Mobile Navigation Content */}
-			<CollapsibleContent className="md:hidden">
-				<div className="border-t bg-background px-4 py-4 space-y-2">
+			<CollapsibleContent className="md:hidden absolute top-full left-0 right-0 bg-background border-b shadow-lg">
+				<div className="px-4 py-4 space-y-2">
 					<Link
 						href="/"
 						className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
