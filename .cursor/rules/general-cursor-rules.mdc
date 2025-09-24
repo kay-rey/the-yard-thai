@@ -81,6 +81,41 @@ alwaysApply: true
 - Ensure proper heading hierarchy (h1, h2, h3, etc.)
 - Provide alt text for images
 
+## Next.js Best Practices
+
+### Server vs Client Components
+
+- **Default to Server Components**: Use server components by default for better performance, SEO, and reduced bundle size
+- **Use Client Components Only When Needed**: Only add "use client" when you need:
+  - Event handlers (onClick, onSubmit, etc.)
+  - State management (useState, useEffect, etc.)
+  - Browser APIs or third-party libraries requiring client-side execution
+  - Interactive UI components (forms, modals, dropdowns)
+
+### Image Optimization
+
+- **Always use Next.js Image component** instead of regular `<img>` tags or CSS background images
+- **Include proper alt text** for accessibility and SEO
+- **Use appropriate props**:
+  - `priority` for above-the-fold images
+  - `fill` with `object-cover` for background-style images
+  - `sizes` for responsive images
+  - `placeholder="blur"` for loading states when appropriate
+
+### Performance Optimization
+
+- **Leverage Server-Side Rendering**: Render static content on the server for better initial load times
+- **Use Static Generation**: Pre-render pages at build time when possible
+- **Optimize Bundle Size**: Minimize client-side JavaScript by using server components
+- **Implement Proper Caching**: Use Next.js caching strategies for API routes and data fetching
+
+### SEO and Accessibility
+
+- **Server Components for SEO**: Server-rendered content is immediately available to search engines
+- **Semantic HTML**: Use proper HTML5 semantic elements
+- **Meta Tags**: Implement proper metadata in layout.tsx and page.tsx files
+- **Structured Data**: Add JSON-LD structured data when appropriate
+
 ## Git Commit Messages
 
 ### Conventional Commits Specification
