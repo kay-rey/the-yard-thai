@@ -15,30 +15,29 @@ export default function Navbar() {
 			{/* Main navbar content */}
 			<div className="flex h-16 items-center justify-between px-4 md:px-6">
 				{/* Logo */}
-				<Link href="/" className="text-2xl font-bold text-foreground">
+				<Link href="/" className="text-3xl font-bold text-foreground">
 					The Yard Thai
 				</Link>
 
 				{/* Desktop Navigation */}
-				<nav className="hidden md:flex items-center space-x-10">
-					<Link
-						href="/"
-						className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
+				<nav className="hidden md:flex items-center space-x-6">
+					<Button
+						variant="link"
+						asChild
+						className="text-foreground hover:text-primary text-lg font-bold"
 					>
-						Home
-					</Link>
-					<Link
-						href="/menu"
-						className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
+						<Link href="/">Home</Link>
+					</Button>
+					<Button
+						variant="link"
+						asChild
+						className="text-foreground hover:text-primary text-lg font-bold"
 					>
-						Menu
-					</Link>
-					<Link
-						href="/contact"
-						className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
-					>
-						Contact
-					</Link>
+						<Link href="/menu">Menu</Link>
+					</Button>
+					<Button variant="default" asChild className="text-lg font-bold">
+						<Link href="/contact">Order Online</Link>
+					</Button>
 				</nav>
 
 				{/* Mobile hamburger menu */}
@@ -57,24 +56,27 @@ export default function Navbar() {
 			{/* Mobile Navigation Content */}
 			<CollapsibleContent className="md:hidden absolute top-full left-0 right-0 bg-background border-b shadow-lg">
 				<div className="px-4 py-4 space-y-2">
-					<Link
-						href="/"
-						className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+					<Button
+						variant="link"
+						asChild
+						className="w-full justify-start text-foreground hover:text-primary text-lg font-bold"
 					>
-						Home
-					</Link>
-					<Link
-						href="/menu"
-						className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+						<Link href="/">Home</Link>
+					</Button>
+					<Button
+						variant="link"
+						asChild
+						className="w-full justify-start text-foreground hover:text-primary text-lg font-bold"
 					>
-						Menu
-					</Link>
-					<Link
-						href="/contact"
-						className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+						<Link href="/menu">Menu</Link>
+					</Button>
+					<Button
+						variant="default"
+						asChild
+						className="w-full justify-start text-lg font-bold"
 					>
-						Contact
-					</Link>
+						<Link href="/contact">Order Online</Link>
+					</Button>
 				</div>
 			</CollapsibleContent>
 		</Collapsible>
