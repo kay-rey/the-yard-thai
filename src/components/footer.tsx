@@ -7,7 +7,7 @@ export default function Footer() {
 	return (
 		<footer className="bg-gray-900 text-white">
 			<div className="container mx-auto px-4 py-8">
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
 					{/* Restaurant Info */}
 					<div className="space-y-4">
 						<h3 className="text-xl font-bold text-white">
@@ -31,7 +31,7 @@ export default function Footer() {
 					{/* Social Media */}
 					<div className="space-y-4">
 						<h4 className="text-lg font-semibold text-white">Follow Us</h4>
-						<div className="flex space-x-4">
+						<div className="flex justify-center md:justify-start space-x-4">
 							<Link
 								href="https://instagram.com"
 								target="_blank"
