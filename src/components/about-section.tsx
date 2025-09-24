@@ -6,7 +6,7 @@ export default function AboutSection() {
 			<div className="mx-auto max-w-6xl">
 				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
 					{/* Left Column - Image */}
-					<div className="order-2 lg:order-1">
+					<div className="order-2 lg:order-1 flex items-center">
 						<div className="relative h-80 w-full overflow-hidden rounded-lg lg:h-96">
 							<Image
 								src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -34,18 +34,11 @@ export default function AboutSection() {
 							</p>
 
 							<p className="text-lg leading-relaxed">
-								Every dish we serve is a celebration of Thailand's rich culinary
-								heritage, from the complex layers of our signature curries to
-								the perfect balance of sweet, sour, salty, and spicy in our
-								classic pad thai. Our chefs bring decades of experience and an
-								unwavering commitment to authenticity.
-							</p>
-
-							<p className="text-lg leading-relaxed">
-								We invite you to experience the warmth of Thai hospitality in
-								our cozy, welcoming space. Whether you're a longtime lover of
-								Thai cuisine or discovering it for the first time, we're here to
-								create memorable moments, one delicious bite at a time.
+								Every dish we serve is a celebration of Thailand&apos;s rich
+								culinary heritage, from the complex layers of our signature
+								curries to the perfect balance of sweet, sour, salty, and spicy
+								in our classic pad thai. Our chefs bring decades of experience
+								and an unwavering commitment to authenticity.
 							</p>
 						</div>
 					</div>
