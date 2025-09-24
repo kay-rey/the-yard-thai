@@ -35,13 +35,14 @@ export default function HeroSection() {
 					<div className="flex flex-col gap-4 sm:flex-row sm:justify-center sm:gap-6">
 						<Button
 							size="lg"
-							className="bg-[var(--jade-green)] px-8 py-3 text-lg font-semibold text-white hover:bg-[var(--warm-sand)] hover:text-[var(--charcoal)] active:bg-[var(--warm-sand)] active:text-[var(--charcoal)] active:scale-95 transition-all duration-200 sm:px-10 touch-manipulation"
+							className="px-8 py-3 text-lg font-semibold sm:px-10"
 						>
 							Order Online
 						</Button>
 						<Button
+							variant="secondary"
 							size="lg"
-							className="border-2 border-white bg-white px-8 py-3 text-lg font-semibold text-[var(--charcoal)] hover:bg-[var(--golden-saffron)] hover:border-[var(--golden-saffron)] active:bg-[var(--golden-saffron)] active:border-[var(--golden-saffron)] active:scale-95 transition-all duration-200 sm:px-10 touch-manipulation"
+							className="px-8 py-3 text-lg font-semibold sm:px-10"
 						>
 							View Menu
 						</Button>
