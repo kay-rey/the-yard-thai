@@ -15,27 +15,27 @@ export default function Navbar() {
 			{/* Main navbar content */}
 			<div className="flex h-16 items-center justify-between px-4 md:px-6">
 				{/* Logo */}
-				<Link href="/" className="text-xl font-bold text-foreground">
-					The Yard
+				<Link href="/" className="text-2xl font-bold text-foreground">
+					The Yard Thai
 				</Link>
 
 				{/* Desktop Navigation */}
-				<nav className="hidden md:flex items-center space-x-6">
+				<nav className="hidden md:flex items-center space-x-10">
 					<Link
 						href="/"
-						className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+						className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
 					>
 						Home
 					</Link>
 					<Link
 						href="/menu"
-						className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+						className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
 					>
 						Menu
 					</Link>
 					<Link
 						href="/contact"
-						className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+						className="text-base font-semibold text-muted-foreground hover:text-foreground transition-colors"
 					>
 						Contact
 					</Link>
@@ -43,7 +43,12 @@ export default function Navbar() {
 
 				{/* Mobile hamburger menu */}
 				<CollapsibleTrigger asChild className="md:hidden">
-					<Button variant="ghost" size="icon" aria-label="Toggle menu">
+					<Button
+						variant="ghost"
+						size="lg"
+						aria-label="Toggle menu"
+						className="h-12 w-12"
+					>
 						<Menu className="h-6 w-6" />
 					</Button>
 				</CollapsibleTrigger>
