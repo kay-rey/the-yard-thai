@@ -20,11 +20,11 @@ export default function AboutSection() {
 
 					{/* Right Column - Content */}
 					<div className="order-1 lg:order-2 flex flex-col justify-center">
-						<h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+						<h2 className="mb-6 text-3xl font-bold text-[var(--charcoal)] sm:text-4xl lg:text-5xl">
 							Our Story
 						</h2>
 
-						<div className="space-y-4 text-gray-600">
+						<div className="space-y-4 text-[var(--charcoal)]/80">
 							<p className="text-lg leading-relaxed">
 								At The Yard Thai Cuisine, we believe that authentic flavors tell
 								the most compelling stories. Our journey began with a simple
