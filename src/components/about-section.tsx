@@ -24,7 +24,7 @@ export default function AboutSection() {
 							Our Story
 						</h2>
 
-						<div className="space-y-4 text-muted-foreground">
+						<div className="space-y-4 text-foreground/80">
 							<p className="text-lg leading-relaxed">
 								At The Yard Thai Cuisine, we believe that authentic flavors tell
 								the most compelling stories. Our journey began with a simple

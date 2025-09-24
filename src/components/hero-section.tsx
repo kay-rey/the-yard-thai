@@ -40,9 +40,9 @@ export default function HeroSection() {
 							Order Online
 						</Button>
 						<Button
-							variant="secondary"
+							variant="outline"
 							size="lg"
-							className="px-8 py-3 text-lg font-semibold sm:px-10"
+							className="border-2 border-white bg-white text-foreground hover:bg-gray-100 px-8 py-3 text-lg font-semibold sm:px-10"
 						>
 							View Menu
 						</Button>
