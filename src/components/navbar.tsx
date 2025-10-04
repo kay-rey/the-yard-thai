@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "lucide-react";
@@ -11,12 +12,26 @@ import {
 } from "@/components/ui/collapsible";
 
 export default function Navbar() {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const handleLinkClick = () => {
+		setIsOpen(false);
+	};
+
 	return (
-		<Collapsible className="sticky top-0 z-50 w-full border-b bg-background">
+		<Collapsible
+			open={isOpen}
+			onOpenChange={setIsOpen}
+			className="sticky top-0 z-50 w-full border-b bg-background"
+		>
 			{/* Main navbar content */}
 			<div className="flex h-16 items-center justify-between px-4 md:px-6">
 				{/* Logo */}
-				<Link href="/" className="flex items-center space-x-3">
+				<Link
+					href="/"
+					className="flex items-center space-x-3"
+					onClick={handleLinkClick}
+				>
 					<Image
 						src="/logo/FullLogo.webp"
 						alt="The Yard Thai Logo"
@@ -73,6 +88,7 @@ export default function Navbar() {
 						variant="link"
 						asChild
 						className="w-full justify-start text-foreground hover:text-primary text-lg font-bold"
+						onClick={handleLinkClick}
 					>
 						<Link href="/">Home</Link>
 					</Button>
@@ -80,6 +96,7 @@ export default function Navbar() {
 						variant="link"
 						asChild
 						className="w-full justify-start text-foreground hover:text-primary text-lg font-bold"
+						onClick={handleLinkClick}
 					>
 						<Link href="/menu">Menu</Link>
 					</Button>
@@ -87,6 +104,7 @@ export default function Navbar() {
 						variant="default"
 						asChild
 						className="w-full justify-start text-lg font-bold"
+						onClick={handleLinkClick}
 					>
 						<Link href="/contact">Order Online</Link>
 					</Button>
