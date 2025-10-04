@@ -428,63 +428,88 @@ export default function MenuSection() {
 				</div>
 
 				{/* Menu Items */}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{filteredItems.map((item) => (
-						<Card
-							key={item.id}
-							className="hover:shadow-lg transition-shadow overflow-hidden p-0 bg-white border border-gray-200"
-						>
-							{/* Image */}
-							{item.image && (
-								<div className="relative h-48 w-full">
-									<Image
-										src={item.image}
-										alt={item.name}
-										fill
-										className="object-cover"
-										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-									/>
-								</div>
-							)}
+				<div className="space-y-8">
+					{categories.map((category) => {
+						const categoryItems =
+							selectedCategory === "all"
+								? menuItems.filter((item) => item.category === category.id)
+								: menuItems.filter(
+										(item) =>
+											item.category === category.id &&
+											item.category === selectedCategory
+								  );
 
-							<CardHeader className="pb-3 px-6 pt-6">
-								<div className="flex items-start justify-between">
-									<CardTitle className="text-lg font-bold">
-										{item.name}
-									</CardTitle>
-									<div className="flex gap-1 ml-2">
-										{item.popular && (
-											<Badge
-												variant="secondary"
-												className="bg-primary text-primary-foreground"
-											>
-												Popular
-											</Badge>
-										)}
-										{item.spicy && (
-											<Badge variant="destructive">🌶️ Spicy</Badge>
-										)}
-										{item.vegetarian && (
-											<Badge
-												variant="outline"
-												className="border-green-500 text-green-600"
-											>
-												🌱 Veg
-											</Badge>
-										)}
-									</div>
+						if (categoryItems.length === 0) return null;
+
+						return (
+							<div key={category.id} className="space-y-4">
+								<div className="flex items-center gap-3">
+									<category.icon className="w-6 h-6 text-primary" />
+									<h2 className="text-2xl font-bold text-foreground">
+										{category.name}
+									</h2>
 								</div>
-								<div className="text-primary font-bold text-xl">
-									{item.price}
+								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+									{categoryItems.map((item) => (
+										<Card
+											key={item.id}
+											className="hover:shadow-lg transition-shadow overflow-hidden p-0 bg-white border border-gray-200"
+										>
+											{/* Image */}
+											{item.image && (
+												<div className="relative h-48 w-full">
+													<Image
+														src={item.image}
+														alt={item.name}
+														fill
+														className="object-cover"
+														sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+													/>
+												</div>
+											)}
+
+											<CardHeader className="pb-3 px-6 pt-6">
+												<div className="flex items-start justify-between">
+													<CardTitle className="text-lg font-bold">
+														{item.name}
+													</CardTitle>
+													<div className="flex gap-1 ml-2">
+														{item.popular && (
+															<Badge
+																variant="secondary"
+																className="bg-primary text-primary-foreground"
+															>
+																Popular
+															</Badge>
+														)}
+														{item.spicy && (
+															<Badge variant="destructive">🌶️ Spicy</Badge>
+														)}
+														{item.vegetarian && (
+															<Badge
+																variant="outline"
+																className="border-green-500 text-green-600"
+															>
+																🌱 Veg
+															</Badge>
+														)}
+													</div>
+												</div>
+												<div className="text-primary font-bold text-xl">
+													{item.price}
+												</div>
+											</CardHeader>
+											<CardContent className="px-6 pb-6">
+												<p className="text-muted-foreground text-sm leading-relaxed">
+													{item.description}
+												</p>
+											</CardContent>
+										</Card>
+									))}
 								</div>
-							</CardHeader>
-							<CardContent className="px-6 pb-6">
-								<p className="text-muted-foreground text-sm leading-relaxed">
-									{item.description}
-								</p>
-							</CardContent>
-						</Card>
-					))}
+							</div>
+						);
+					})}
 				</div>
 
 				{/* Order Online CTA */}
