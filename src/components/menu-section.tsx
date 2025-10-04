@@ -522,8 +522,14 @@ export default function MenuSection() {
 							<p className="text-muted-foreground mb-6">
 								Experience authentic Thai flavors delivered to your door
 							</p>
-							<Button size="lg" className="text-lg font-bold">
-								Order Online Now
+							<Button size="lg" className="text-lg font-bold" asChild>
+								<a
+									href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Order Online Now
+								</a>
 							</Button>
 						</CardContent>
 					</Card>

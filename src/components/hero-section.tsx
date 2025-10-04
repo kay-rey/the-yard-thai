@@ -36,8 +36,15 @@ export default function HeroSection() {
 						<Button
 							size="lg"
 							className="px-8 py-3 text-lg font-semibold sm:px-10 hover:bg-muted-foreground/80 hover:text-white/80"
+							asChild
 						>
-							Order Online
+							<a
+								href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Order Online
+							</a>
 						</Button>
 						<Button
 							size="lg"

@@ -59,14 +59,26 @@ export default function Navbar() {
 						<Link href="/menu">Menu</Link>
 					</Button>
 					<Button variant="default" asChild className="text-lg font-bold">
-						<Link href="/contact">Order Online</Link>
+						<Link
+							href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Order Online
+						</Link>
 					</Button>
 				</nav>
 
 				{/* Mobile buttons */}
 				<div className="flex items-center space-x-2 md:hidden ">
 					<Button variant="default" asChild className="text-lg font-bold">
-						<Link href="/contact">Order Online</Link>
+						<Link
+							href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Order Online
+						</Link>
 					</Button>
 					<CollapsibleTrigger asChild>
 						<Button
@@ -106,7 +118,13 @@ export default function Navbar() {
 						className="w-full justify-start text-lg font-bold"
 						onClick={handleLinkClick}
 					>
-						<Link href="/contact">Order Online</Link>
+						<Link
+							href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Order Online
+						</Link>
 					</Button>
 				</div>
 			</CollapsibleContent>
