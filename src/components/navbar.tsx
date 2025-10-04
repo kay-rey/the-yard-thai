@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,8 +16,15 @@ export default function Navbar() {
 			{/* Main navbar content */}
 			<div className="flex h-16 items-center justify-between px-4 md:px-6">
 				{/* Logo */}
-				<Link href="/" className="text-3xl font-bold text-primary">
-					The Yard Thai
+				<Link href="/" className="flex items-center space-x-3">
+					<Image
+						src="/logo/FullLogo.webp"
+						alt="The Yard Thai Logo"
+						width={120}
+						height={40}
+						className="h-15 w-auto"
+						priority
+					/>
 				</Link>
 
 				{/* Desktop Navigation */}
@@ -40,17 +48,22 @@ export default function Navbar() {
 					</Button>
 				</nav>
 
-				{/* Mobile hamburger menu */}
-				<CollapsibleTrigger asChild className="md:hidden">
-					<Button
-						variant="ghost"
-						size="lg"
-						aria-label="Toggle menu"
-						className="h-12 w-12"
-					>
-						<Menu className="h-6 w-6" />
+				{/* Mobile buttons */}
+				<div className="flex items-center space-x-2 md:hidden">
+					<Button variant="default" asChild className="text-lg font-bold">
+						<Link href="/contact">Order Online</Link>
 					</Button>
-				</CollapsibleTrigger>
+					<CollapsibleTrigger asChild>
+						<Button
+							variant="ghost"
+							size="lg"
+							aria-label="Toggle menu"
+							className="h-12 w-12"
+						>
+							<Menu className="h-6 w-6" />
+						</Button>
+					</CollapsibleTrigger>
+				</div>
 			</div>
 
 			{/* Mobile Navigation Content */}
