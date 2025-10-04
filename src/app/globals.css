@@ -46,12 +46,12 @@
 :root {
 	--radius: 0.625rem;
 
-	/* Thai-inspired color palette */
-	--jade-green: #2d5a4b; /* Primary - Fresh basil, lime leaves */
-	--warm-sand: #f4a261; /* Secondary - Terracotta, spices */
-	--golden-saffron: #e9c46a; /* Accent - Saffron, turmeric */
-	--light-cream: #fefbf6; /* Neutral - Warm off-white */
-	--charcoal: #264653; /* Text - Dark teal/charcoal */
+	/* Thai-inspired color palette - Vibrant Yellow/Gold Earth Tones */
+	--golden-yellow: #F1A244; /* Primary - Bright golden turmeric, Thai curry */
+	--warm-amber: #f39c12; /* Secondary - Vibrant saffron, golden spices */
+	--terracotta: #e67e22; /* Accent - Warm golden earth, clay pottery */
+	--light-cream: #FFF8EB; /* Neutral - Warm off-white */
+	--charcoal: #8b4513; /* Text - Rich golden brown, dark earth */
 
 	/* Semantic color mappings */
 	--background: var(--light-cream);
@@ -60,31 +60,31 @@
 	--card-foreground: var(--charcoal);
 	--popover: var(--light-cream);
 	--popover-foreground: var(--charcoal);
-	--primary: var(--jade-green);
+	--primary: var(--golden-yellow);
 	--primary-foreground: var(--light-cream);
-	--secondary: var(--warm-sand);
+	--secondary: var(--warm-amber);
 	--secondary-foreground: var(--charcoal);
 	--muted: #f5f5f5;
 	--muted-foreground: #4a5568;
-	--accent: var(--golden-saffron);
-	--accent-foreground: var(--charcoal);
+	--accent: var(--terracotta);
+	--accent-foreground: var(--light-cream);
 	--destructive: #dc2626;
 	--border: #e5e7eb;
 	--input: #e5e7eb;
-	--ring: var(--jade-green);
-	--chart-1: var(--jade-green);
-	--chart-2: var(--warm-sand);
-	--chart-3: var(--golden-saffron);
+	--ring: var(--golden-yellow);
+	--chart-1: var(--golden-yellow);
+	--chart-2: var(--warm-amber);
+	--chart-3: var(--terracotta);
 	--chart-4: #8b5cf6;
 	--chart-5: #06b6d4;
 	--sidebar: var(--light-cream);
 	--sidebar-foreground: var(--charcoal);
-	--sidebar-primary: var(--jade-green);
+	--sidebar-primary: var(--golden-yellow);
 	--sidebar-primary-foreground: var(--light-cream);
-	--sidebar-accent: var(--warm-sand);
+	--sidebar-accent: var(--warm-amber);
 	--sidebar-accent-foreground: var(--charcoal);
 	--sidebar-border: #e5e7eb;
-	--sidebar-ring: var(--jade-green);
+	--sidebar-ring: var(--golden-yellow);
 }
 
 .dark {
@@ -95,31 +95,31 @@
 	--card-foreground: var(--light-cream);
 	--popover: #2a2a2a;
 	--popover-foreground: var(--light-cream);
-	--primary: var(--jade-green);
+	--primary: var(--golden-yellow);
 	--primary-foreground: var(--light-cream);
-	--secondary: var(--warm-sand);
+	--secondary: var(--warm-amber);
 	--secondary-foreground: var(--charcoal);
 	--muted: #3a3a3a;
 	--muted-foreground: #9ca3af;
-	--accent: var(--golden-saffron);
-	--accent-foreground: var(--charcoal);
+	--accent: var(--terracotta);
+	--accent-foreground: var(--light-cream);
 	--destructive: #ef4444;
 	--border: #404040;
 	--input: #404040;
-	--ring: var(--jade-green);
-	--chart-1: var(--jade-green);
-	--chart-2: var(--warm-sand);
-	--chart-3: var(--golden-saffron);
+	--ring: var(--golden-yellow);
+	--chart-1: var(--golden-yellow);
+	--chart-2: var(--warm-amber);
+	--chart-3: var(--terracotta);
 	--chart-4: #8b5cf6;
 	--chart-5: #06b6d4;
 	--sidebar: #2a2a2a;
 	--sidebar-foreground: var(--light-cream);
-	--sidebar-primary: var(--jade-green);
+	--sidebar-primary: var(--golden-yellow);
 	--sidebar-primary-foreground: var(--light-cream);
-	--sidebar-accent: var(--warm-sand);
+	--sidebar-accent: var(--warm-amber);
 	--sidebar-accent-foreground: var(--charcoal);
 	--sidebar-border: #404040;
-	--sidebar-ring: var(--jade-green);
+	--sidebar-ring: var(--golden-yellow);
 }
 
 @layer base {

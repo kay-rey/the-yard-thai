@@ -15,7 +15,7 @@ export default function Navbar() {
 			{/* Main navbar content */}
 			<div className="flex h-16 items-center justify-between px-4 md:px-6">
 				{/* Logo */}
-				<Link href="/" className="text-3xl font-bold text-foreground">
+				<Link href="/" className="text-3xl font-bold text-primary">
 					The Yard Thai
 				</Link>
 

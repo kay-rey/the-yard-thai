@@ -55,17 +55,17 @@ alwaysApply: true
 ### Color Palette
 
 - **MANDATORY**: Use the Thai-inspired color palette for all components
-- **Primary (Jade Green)**: `#2D5A4B` 🟩 — Use for primary buttons, links, and important headings
-- **Secondary (Warm Sand)**: `#F4A261` 🟧 — Use for secondary buttons or highlight backgrounds
-- **Accent (Golden Saffron)**: `#E9C46A` 🟨 — Use sparingly for special tags, icons, or decorative elements
+- **Primary (Golden Yellow)**: `#F4D03F` 🟨 — Use for primary buttons, links, and important headings (bright golden turmeric, Thai curry)
+- **Secondary (Warm Amber)**: `#F39C12` 🟡 — Use for secondary buttons or highlight backgrounds (vibrant saffron, golden spices)
+- **Accent (Terracotta)**: `#E67E22` 🟤 — Use sparingly for special tags, icons, or decorative elements (warm golden earth, clay pottery)
 - **Neutral (Light Cream)**: `#FEFBF6` ⬜️ — Use for backgrounds (easier on eyes than pure white)
-- **Text (Charcoal)**: `#264653` ⬛️ — Use for all text content (softer than pure black)
+- **Text (Charcoal)**: `#8B4513` ⬛️ — Use for all text content (rich golden brown, dark earth)
 
 #### Color Usage Guidelines
 
-- **CSS Custom Properties**: Use `var(--jade-green)`, `var(--warm-sand)`, etc. in Tailwind classes
+- **CSS Custom Properties**: Use `var(--golden-yellow)`, `var(--warm-amber)`, etc. in Tailwind classes
 - **Semantic Mapping**: Leverage the semantic color variables (`--primary`, `--secondary`, etc.)
-- **Hover States**: Use warm sand and golden saffron for interactive hover effects
+- **Hover States**: Use warm amber and terracotta for interactive hover effects
 - **Accessibility**: Ensure sufficient contrast ratios for all color combinations
 - **Consistency**: Never use arbitrary colors outside this palette without approval
 
