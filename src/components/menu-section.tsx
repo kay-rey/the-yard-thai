@@ -398,7 +398,7 @@ export default function MenuSection() {
 			: menuItems.filter((item) => item.category === selectedCategory);
 
 	return (
-		<section className="py-8 md:py-1">
+		<section className="py-2 md:py-3">
 			<div className="container mx-auto px-4">
 				{/* Category Filter */}
 				<div className="flex flex-wrap justify-center gap-2 mb-8">
