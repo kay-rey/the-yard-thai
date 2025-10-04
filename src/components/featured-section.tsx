@@ -38,7 +38,7 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
 						<div className="relative">
 							<Image
-								src="/menu-pictures/padthai.jpg"
+								src="/menu-pictures/Padthai.jpg"
 								alt="Pad Thai"
 								width={300}
 								height={192}
