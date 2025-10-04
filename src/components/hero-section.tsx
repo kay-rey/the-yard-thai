@@ -7,7 +7,7 @@ export default function HeroSection() {
 			{/* Background Image with Overlay */}
 			<div className="absolute inset-0">
 				<Image
-					src="/menu-pictures/theyardheropicture.jpg"
+					src="/logo/theyardheropicture.webp"
 					alt="Delicious Thai cuisine with colorful dishes including pad thai, curry, and fresh vegetables"
 					fill
 					className="object-cover"
