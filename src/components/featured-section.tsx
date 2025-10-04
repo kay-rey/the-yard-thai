@@ -8,7 +8,7 @@ export default function FeaturedSection() {
 		<section className="py-16 px-4 bg-muted/50">
 			<div className="max-w-6xl mx-auto">
 				<div className="text-center mb-12">
-					<h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+					<h2 className="text-3xl md:text-4xl font-bold text-accent mb-4 text-balance">
 						Featured Dishes
 					</h2>
 					<p className="text-lg text-muted-foreground text-balance">
@@ -16,7 +16,7 @@ export default function FeaturedSection() {
 					</p>
 				</div>
 
-				<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
 						<div className="relative">
 							<Image
@@ -91,7 +91,7 @@ export default function FeaturedSection() {
 				</div>
 
 				<div className="text-center mt-12">
-					<Button variant="outline" size="lg" asChild>
+					<Button variant="default" asChild className="text-lg font-bold bg-accent/90">
 						<Link href="/menu">View Full Menu</Link>
 					</Button>
 				</div>

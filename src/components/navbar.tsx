@@ -49,7 +49,7 @@ export default function Navbar() {
 				</nav>
 
 				{/* Mobile buttons */}
-				<div className="flex items-center space-x-2 md:hidden">
+				<div className="flex items-center space-x-2 md:hidden ">
 					<Button variant="default" asChild className="text-lg font-bold">
 						<Link href="/contact">Order Online</Link>
 					</Button>
@@ -58,7 +58,7 @@ export default function Navbar() {
 							variant="ghost"
 							size="lg"
 							aria-label="Toggle menu"
-							className="h-12 w-12"
+							className="h-12 w-12 hover:bg-primary"
 						>
 							<Menu className="h-6 w-6" />
 						</Button>
