@@ -91,7 +91,11 @@ export default function FeaturedSection() {
 				</div>
 
 				<div className="text-center mt-12">
-					<Button variant="default" asChild className="text-lg font-bold bg-accent/90">
+					<Button
+						variant="default"
+						asChild
+						className="text-lg font-bold bg-accent/90"
+					>
 						<Link href="/menu">View Full Menu</Link>
 					</Button>
 				</div>

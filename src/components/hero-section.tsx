@@ -40,7 +40,6 @@ export default function HeroSection() {
 							Order Online
 						</Button>
 						<Button
-						
 							size="lg"
 							className="bg-white text-primary  px-8 py-3 text-lg font-semibold sm:px-10 hover:bg-muted-foreground/80 hover:text-white/80"
 						>
