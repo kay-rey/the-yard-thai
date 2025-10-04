@@ -20,11 +20,11 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300">
 						<div className="relative overflow-hidden rounded-t-lg">
 							<Image
-								src="/authentic-thai-green-curry-with-jasmine-rice-and-f.jpg"
+								src="/menu-pictures/missing-pictures/Green curry.jpg"
 								alt="Green Curry"
 								width={300}
 								height={192}
-								className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
 							/>
 						</div>
 						<CardContent className="p-4">
@@ -38,11 +38,11 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300">
 						<div className="relative overflow-hidden rounded-t-lg">
 							<Image
-								src="/traditional-thai-pad-thai-noodles-with-shrimp-and-.jpg"
+								src="/menu-pictures/padthai.jpg"
 								alt="Pad Thai"
 								width={300}
 								height={192}
-								className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
 							/>
 						</div>
 						<CardContent className="p-4">
@@ -56,11 +56,11 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300">
 						<div className="relative overflow-hidden rounded-t-lg">
 							<Image
-								src="/thai-mango-sticky-rice-dessert-with-coconut-milk.jpg"
+								src="/menu-pictures/Mango & sticky rice.jpg"
 								alt="Mango Sticky Rice"
 								width={300}
 								height={192}
-								className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
 							/>
 						</div>
 						<CardContent className="p-4">
@@ -74,11 +74,11 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300">
 						<div className="relative overflow-hidden rounded-t-lg">
 							<Image
-								src="/thai-tom-yum-soup-with-shrimp-and-lemongrass.jpg"
+								src="/menu-pictures/missing-pictures/Tom yum soup.jpg"
 								alt="Tom Yum Soup"
 								width={300}
 								height={192}
-								className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
 							/>
 						</div>
 						<CardContent className="p-4">
