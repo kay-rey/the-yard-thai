@@ -26,6 +26,30 @@ export const metadata: Metadata = {
 		],
 		apple: "/logo/FullLogo.png",
 	},
+	openGraph: {
+		title: "The Yard Thai Cuisine - Authentic Thai Food",
+		description:
+			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
+		url: "https://the-yard-thai.vercel.app", // Update this with your actual domain
+		siteName: "The Yard Thai Cuisine",
+		images: [
+			{
+				url: "/logo/logowithbackground.webp",
+				width: 1200,
+				height: 630,
+				alt: "The Yard Thai Cuisine - Delicious Thai food including pad thai, curry, and fresh vegetables",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "The Yard Thai Cuisine - Authentic Thai Food",
+		description:
+			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
+		images: ["/logo/theyardheropicture.webp"],
+	},
 };
 
 export default function RootLayout({
