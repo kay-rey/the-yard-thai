@@ -20,14 +20,14 @@ export default function HeroSection() {
 
 			{/* Content */}
 			<div className="relative z-10 flex h-full items-center justify-center">
-				<div className="mx-auto max-w-4xl px-4 text-center text-white">
+				<div className="mx-auto max-w-4xl px-4 text-center text-background">
 					{/* Main Heading */}
-					<h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+					<h1 className="mb-6 text-7xl font-bold tracking-tight">
 						The Yard Thai Cuisine
 					</h1>
 
 					{/* Subheading */}
-					<p className="mb-8 text-lg font-medium text-gray-200 sm:text-xl md:text-2xl">
+					<p className="mb-8 text-lg font-medium text-background/90 sm:text-xl md:text-2xl">
 						Authentic Flavors, Modern Twist
 					</p>
 
