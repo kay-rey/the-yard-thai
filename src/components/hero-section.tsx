@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
@@ -38,19 +39,20 @@ export default function HeroSection() {
 							className="px-8 py-3 text-lg font-semibold sm:px-10 hover:bg-muted-foreground/80 hover:text-white/80"
 							asChild
 						>
-							<a
+							<Link
 								href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								Order Online
-							</a>
+							</Link>
 						</Button>
 						<Button
 							size="lg"
 							className="bg-white text-primary  px-8 py-3 text-lg font-semibold sm:px-10 hover:bg-muted-foreground/80 hover:text-white/80"
+							asChild
 						>
-							View Menu
+							<Link href="/menu">View Menu</Link>
 						</Button>
 					</div>
 				</div>
