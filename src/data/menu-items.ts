@@ -16,8 +16,8 @@ export const menuItems: MenuItem[] = [
 		description:
 			"4 skewers. Grilled chicken on skewers marinated with Thai herb served with toasted bread, fresh peanut sauce, and cucumber salad",
 		price: "$16.00",
-        category: "appetizers",
-        image: "/images/menu-pictures/appetizers/chicken-sa-tae-1.jpg",
+		category: "appetizers",
+		image: "/images/menu-pictures/appetizers/chicken-sa-tae-1.jpg",
 	},
 	{
 		id: "veggie-egg-rolls",
@@ -87,6 +87,7 @@ export const menuItems: MenuItem[] = [
 		description: "7 pieces. Choice of chicken or sweet potato",
 		price: "$12.00",
 		category: "appetizers",
+		image: "/images/menu-pictures/appetizers/sweet-potato-fried-wontons.jpg",
 	},
 	{
 		id: "mixed-tempura",
@@ -397,6 +398,7 @@ export const menuItems: MenuItem[] = [
 		price: "$19.00",
 		category: "stir-fried",
 		vegetarian: true,
+		image: "/images/menu-pictures/stir-fried/veggie-delights.jpg",
 	},
 	{
 		id: "spicy-eggplant",
@@ -415,7 +417,7 @@ export const menuItems: MenuItem[] = [
 			"Sauteed baby corn, mushroom, snow pea, and carrot with garlic sauce",
 		price: "$19.00",
 		category: "stir-fried",
-		image: "/images/menu-pictures/sides/baby-corn-delight.jpg",
+		image: "/images/menu-pictures/stir-fried/baby-corn-delight.jpg",
 	},
 	{
 		id: "rama-spinach-delight",
@@ -423,7 +425,7 @@ export const menuItems: MenuItem[] = [
 		description: "Sauteed spinach, broccoli, and carrot with Thai peanut sauce",
 		price: "$19.00",
 		category: "stir-fried",
-		image: "/images/menu-pictures/sides/spinach-delight-rama.jpg",
+		image: "/images/menu-pictures/stir-fried/spinach-delight-rama.jpg",
 	},
 
 	// Fried Rice
@@ -869,6 +871,7 @@ export const menuItems: MenuItem[] = [
 		description: "",
 		price: "$14.00",
 		category: "sides",
+		image: "/images/menu-pictures/sides/kai-jeaw.jpg",
 	},
 	{
 		id: "small-house-salad",
