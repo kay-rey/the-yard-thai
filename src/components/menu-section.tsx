@@ -45,7 +45,7 @@ export default function MenuSection() {
 	return (
 		<section className="py-2 md:py-3">
 			<div className="container mx-auto px-4">
-				{/* --- CODE FOR CATEGORY BUTTONS RESTORED BELOW --- */}
+				{/* Category Filter */}
 				<div className="flex flex-wrap justify-center gap-2 mb-8">
 					<Button
 						variant={selectedCategory === "all" ? "default" : "outline"}
@@ -114,7 +114,7 @@ export default function MenuSection() {
 					})}
 				</div>
 
-				{/* --- CODE FOR ORDER ONLINE CTA RESTORED BELOW --- */}
+				{/* Order Online CTA */}
 				<div className="text-center mt-16">
 					<Card className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
 						<CardContent className="py-8">
@@ -168,12 +168,15 @@ export default function MenuSection() {
 								}
 							>
 								{selectedMenuItem.image && (
-									<div className="relative w-full lg:w-1/2 rounded-lg overflow-hidden aspect-[4/3]">
+									<div
+										// FINAL CHANGE: Responsive aspect ratio for mobile vs. desktop
+										className="relative w-full lg:w-1/2 rounded-xl overflow-hidden aspect-[4/3] lg:aspect-square"
+									>
 										<Image
 											src={selectedMenuItem.image}
 											alt={selectedMenuItem.name}
 											fill
-											className="object-contain"
+											className="object-cover"
 											sizes="(max-width: 1024px) 90vw, 50vw"
 										/>
 									</div>
