@@ -23,11 +23,11 @@ export const metadata: Metadata = {
 		"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
 	icons: {
 		icon: [
-			{ url: "/logo/FullLogo.ico", sizes: "any" },
-			{ url: "/logo/FullLogo.png", sizes: "32x32", type: "image/png" },
-			{ url: "/logo/FullLogo.webp", sizes: "16x16", type: "image/webp" },
+			{ url: "/images/logo/FullLogo.ico", sizes: "any" },
+			{ url: "/images/logo/FullLogo.png", sizes: "32x32", type: "image/png" },
+			{ url: "/images/logo/FullLogo.webp", sizes: "16x16", type: "image/webp" },
 		],
-		apple: "/logo/FullLogo.png",
+		apple: "/images/logo/FullLogo.png",
 	},
 	openGraph: {
 		title: "The Yard Thai Cuisine - Authentic Thai Food",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 		siteName: "The Yard Thai Cuisine",
 		images: [
 			{
-				url: "/logo/logowithbackground.webp",
+				url: "/images/logo/logowithbackground.webp",
 				width: 1200,
 				height: 630,
 				alt: "The Yard Thai Cuisine - Delicious Thai food including pad thai, curry, and fresh vegetables",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 		title: "The Yard Thai Cuisine - Authentic Thai Food",
 		description:
 			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
-		images: ["/logo/theyardheropicture.webp"],
+		images: ["/images/logo/theyardheropicture.webp"],
 	},
 };
 

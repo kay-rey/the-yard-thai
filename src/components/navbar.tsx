@@ -33,7 +33,7 @@ export default function Navbar() {
 					onClick={handleLinkClick}
 				>
 					<Image
-						src="/logo/FullLogo.webp"
+						src="/images/logo/FullLogo.webp"
 						alt="The Yard Thai Logo"
 						width={120}
 						height={40}
