@@ -50,7 +50,11 @@ export default function MenuSection() {
 					<Button
 						variant={selectedCategory === "all" ? "default" : "outline"}
 						onClick={() => setSelectedCategory("all")}
-						className="mb-2"
+						className={`mb-2 transition-all duration-200 ${
+							selectedCategory === "all"
+								? "bg-primary text-primary-foreground shadow-md"
+								: "bg-white border-2 border-primary/20 text-charcoal hover:border-primary hover:bg-warm-amber/12 hover:text-charcoal hover:shadow-lg"
+						}`}
 					>
 						All Items
 					</Button>
@@ -63,7 +67,11 @@ export default function MenuSection() {
 									selectedCategory === category.id ? "default" : "outline"
 								}
 								onClick={() => setSelectedCategory(category.id)}
-								className="mb-2"
+								className={`mb-2 transition-all duration-200 ${
+									selectedCategory === category.id
+										? "bg-primary text-primary-foreground shadow-md"
+										: "bg-white border-2 border-primary/20 text-charcoal hover:border-primary hover:bg-warm-amber/12 hover:text-charcoal hover:shadow-lg"
+								}`}
 							>
 								<Icon className="w-4 h-4 mr-2" />
 								{category.name}

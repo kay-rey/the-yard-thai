@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
 	Collapsible,
@@ -15,6 +15,11 @@ export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleLinkClick = () => {
+		setIsOpen(false);
+	};
+
+	const handleCallClick = () => {
+		window.location.href = "tel:+18185327272";
 		setIsOpen(false);
 	};
 
@@ -58,6 +63,14 @@ export default function Navbar() {
 					>
 						<Link href="/menu">Menu</Link>
 					</Button>
+					<Button
+						variant="outline"
+						onClick={handleCallClick}
+						className="text-lg font-bold flex items-center space-x-2"
+					>
+						<Phone className="h-4 w-4" />
+						<span>Call (818) 532-7272</span>
+					</Button>
 					<Button variant="default" asChild className="text-lg font-bold">
 						<Link
 							href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
@@ -71,6 +84,14 @@ export default function Navbar() {
 
 				{/* Mobile buttons */}
 				<div className="flex items-center space-x-2 md:hidden ">
+					<Button
+						variant="outline"
+						onClick={handleCallClick}
+						className="text-sm font-bold flex items-center space-x-1"
+					>
+						<Phone className="h-4 w-4" />
+						<span>Call</span>
+					</Button>
 					<Button variant="default" asChild className="text-lg font-bold">
 						<Link
 							href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
@@ -111,6 +132,14 @@ export default function Navbar() {
 						onClick={handleLinkClick}
 					>
 						<Link href="/menu">Menu</Link>
+					</Button>
+					<Button
+						variant="outline"
+						onClick={handleCallClick}
+						className="w-full justify-start text-lg font-bold flex items-center space-x-2"
+					>
+						<Phone className="h-4 w-4" />
+						<span>Call (818) 532-7272</span>
 					</Button>
 					<Button
 						variant="default"
