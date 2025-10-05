@@ -29,7 +29,7 @@ export default function HeroSection() {
 
 					{/* Subheading */}
 					<p className="mb-8 text-lg font-medium text-background/90 sm:text-xl md:text-2xl">
-						Authentic Flavors, Modern Twist
+						Women-Owned • Fresh Ingredients • Agoura Hills, CA
 					</p>
 
 					{/* Call-to-Action Buttons */}

@@ -14,17 +14,18 @@ export default function Footer() {
 							The Yard Thai Cuisine
 						</h3>
 						<p className="text-background/90 text-sm">
-							Authentic Thai flavors in the heart of the city
+							Women-owned & operated • Fresh ingredients • Agoura Hills, CA
 						</p>
 					</div>
 
 					{/* Hours */}
 					<div className="space-y-4">
 						<h4 className="text-lg font-semibold text-background">Hours</h4>
+						{/* --- UPDATED HOURS SECTION --- */}
 						<div className="text-background/90 text-sm space-y-1">
-							<p>Monday - Thursday: 11:00 AM - 9:00 PM</p>
-							<p>Friday - Saturday: 11:00 AM - 10:00 PM</p>
-							<p>Sunday: 12:00 PM - 8:00 PM</p>
+							<p>Mon - Thu: 11:00 AM - 2:30 PM, 4:00 PM - 8:15 PM</p>
+							<p>Fri - Sat: 11:00 AM - 2:30 PM, 4:00 PM - 8:30 PM</p>
+							<p>Sunday: 11:30 AM - 2:30 PM, 4:00 PM - 8:15 PM</p>
 						</div>
 					</div>
 
@@ -60,8 +61,8 @@ export default function Footer() {
 						<p className="text-background/80 text-sm">
 							© {currentYear} The Yard Thai Cuisine. All rights reserved.
 						</p>
-						<p className="text-background/80 text-sm">
-							Made with ❤️ for authentic Thai cuisine lovers
+						<p>
+							<Link href="https://kevbreyes.com/" className="text-sm text-background/80 hover:text-accent transition-colors">Made by 🐨</Link>
 						</p>
 					</div>
 				</div>
