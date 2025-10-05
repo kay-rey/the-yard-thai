@@ -430,14 +430,9 @@ export default function MenuSection() {
 				{/* Menu Items */}
 				<div className="space-y-8">
 					{categories.map((category) => {
-						const categoryItems =
-							selectedCategory === "all"
-								? menuItems.filter((item) => item.category === category.id)
-								: menuItems.filter(
-										(item) =>
-											item.category === category.id &&
-											item.category === selectedCategory
-								  );
+						const categoryItems = filteredItems.filter(
+							(item) => item.category === category.id
+						);
 
 						if (categoryItems.length === 0) return null;
 
