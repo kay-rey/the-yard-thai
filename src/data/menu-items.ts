@@ -16,7 +16,8 @@ export const menuItems: MenuItem[] = [
 		description:
 			"4 skewers. Grilled chicken on skewers marinated with Thai herb served with toasted bread, fresh peanut sauce, and cucumber salad",
 		price: "$16.00",
-		category: "appetizers",
+        category: "appetizers",
+        image: "/images/menu-pictures/appetizers/chicken-sa-tae-1.jpg",
 	},
 	{
 		id: "veggie-egg-rolls",
@@ -26,6 +27,7 @@ export const menuItems: MenuItem[] = [
 		price: "$12.00",
 		category: "appetizers",
 		vegetarian: true,
+		image: "/images/menu-pictures/appetizers/veggie-eggroll.jpg",
 	},
 	{
 		id: "fresh-spring-rolls",
@@ -34,6 +36,7 @@ export const menuItems: MenuItem[] = [
 			"Artisan lettuce, rice paper, mixed green, carrot, and choice of shrimp or soy protein served with tamarind peanut sauce",
 		price: "$14.00",
 		category: "appetizers",
+		image: "/images/menu-pictures/appetizers/fresh-spring-rolls.jpg",
 	},
 	{
 		id: "calamari",
@@ -41,6 +44,7 @@ export const menuItems: MenuItem[] = [
 		description: "Crispy calamari served with plum sauce",
 		price: "$14.00",
 		category: "appetizers",
+		image: "/images/menu-pictures/appetizers/calamari.jpg",
 	},
 	{
 		id: "thai-spicy-wings",
@@ -49,6 +53,7 @@ export const menuItems: MenuItem[] = [
 		price: "$14.00",
 		category: "appetizers",
 		spicy: true,
+		image: "/images/menu-pictures/appetizers/spicy-wings.jpg",
 	},
 	{
 		id: "gyoza-chicken-or-veggie-6-pc",
@@ -57,6 +62,7 @@ export const menuItems: MenuItem[] = [
 			"6 pieces. Wontons filled with ground meat and veggies. Served with sesame oil and soy sauce",
 		price: "$12.00",
 		category: "appetizers",
+		image: "/images/menu-pictures/appetizers/gyoza.jpg",
 	},
 	{
 		id: "thai-toast",
@@ -65,6 +71,7 @@ export const menuItems: MenuItem[] = [
 			"Ground chicken, green onion, and carrot on a slice of bread (frying) come with cucumber sauce",
 		price: "$16.00",
 		category: "appetizers",
+		image: "/images/menu-pictures/appetizers/thai-toast.jpg",
 	},
 	{
 		id: "fried-tofu-8pc",
@@ -98,6 +105,7 @@ export const menuItems: MenuItem[] = [
 		price: "$14.00",
 		category: "soups",
 		spicy: true,
+		image: "/images/menu-pictures/soups/tom-yum-soup.jpg",
 	},
 	{
 		id: "tom-kha-soup",
@@ -106,6 +114,7 @@ export const menuItems: MenuItem[] = [
 			"Coconut milk with herbs, mushroom, cilantro, and choice of tofu, veggie, or chicken",
 		price: "$15.00",
 		category: "soups",
+		image: "/images/menu-pictures/soups/tom-kha-soup.jpg",
 	},
 	{
 		id: "wontons-soup",
@@ -113,6 +122,7 @@ export const menuItems: MenuItem[] = [
 		description: "Chicken stuffed wontons and clear broth with bokchoys",
 		price: "$14.00",
 		category: "soups",
+		image: "/images/menu-pictures/soups/wonton-soup.jpg",
 	},
 	{
 		id: "chicken-silver-noodle-soup",
@@ -129,6 +139,7 @@ export const menuItems: MenuItem[] = [
 		price: "$14.00",
 		category: "soups",
 		vegetarian: true,
+		image: "/images/menu-pictures/soups/veggie-tofu-soup.jpg",
 	},
 	{
 		id: "spicy-seafood-soup",
@@ -149,6 +160,7 @@ export const menuItems: MenuItem[] = [
 		price: "$17.00",
 		category: "salads",
 		spicy: true,
+		image: "/images/menu-pictures/salads/papaya-salad.jpg",
 	},
 	{
 		id: "thai-salad",
@@ -158,6 +170,7 @@ export const menuItems: MenuItem[] = [
 		price: "$17.00",
 		category: "salads",
 		vegetarian: true,
+		image: "/images/menu-pictures/salads/thai-salad.jpg",
 	},
 	{
 		id: "beef-salad",
@@ -167,6 +180,7 @@ export const menuItems: MenuItem[] = [
 		price: "$17.00",
 		category: "salads",
 		spicy: true,
+		image: "/images/menu-pictures/salads/beef-salad.jpg",
 	},
 	{
 		id: "shrimp-salad",
@@ -175,6 +189,7 @@ export const menuItems: MenuItem[] = [
 			"Grilled shrimps with, lime dressing, lemongrass, tomato, cucumber, mint leaves, and carrot with mixed green",
 		price: "$18.00",
 		category: "salads",
+		image: "/images/menu-pictures/salads/shrimp-salad.jpg",
 	},
 	{
 		id: "larb-salad",
@@ -184,6 +199,7 @@ export const menuItems: MenuItem[] = [
 		price: "$17.00",
 		category: "salads",
 		spicy: true,
+		image: "/images/menu-pictures/salads/larb.jpg",
 	},
 	{
 		id: "silver-noodle-salad",
@@ -192,6 +208,7 @@ export const menuItems: MenuItem[] = [
 			"Silver noodles with shrimp and chicken, lime dressing, Thai chili, red onion, scallion, carrot, tomato, cilantro, peanut, and mixed green",
 		price: "$18.00",
 		category: "salads",
+		image: "/images/menu-pictures/salads/silver-noodle-salad.jpg",
 	},
 	{
 		id: "nam-sod-salad",
@@ -200,6 +217,7 @@ export const menuItems: MenuItem[] = [
 			"Minced chicken with lime dressing, fresh ginger, peanut, scallion, red onion, and cilantro with mixed green",
 		price: "$17.00",
 		category: "salads",
+		image: "/images/menu-pictures/salads/nan-sod-salad.jpg",
 	},
 	{
 		id: "soy-salad",
@@ -220,6 +238,7 @@ export const menuItems: MenuItem[] = [
 		price: "$17.00",
 		category: "noodles",
 		popular: true,
+		image: "/images/menu-pictures/noodles/padthai.jpg",
 	},
 	{
 		id: "pad-see-eiw",
@@ -228,6 +247,7 @@ export const menuItems: MenuItem[] = [
 			"Stir-fried flat rice noodles with Chinese broccoli, egg, and sweet soy sauce",
 		price: "$17.00",
 		category: "noodles",
+		image: "/images/menu-pictures/noodles/pad-see-eiw-noodle.jpg",
 	},
 	{
 		id: "pad-kee-mao",
@@ -237,6 +257,7 @@ export const menuItems: MenuItem[] = [
 		price: "$17.00",
 		category: "noodles",
 		spicy: true,
+		image: "/images/menu-pictures/noodles/pad-khee-mao-noodle.jpg",
 	},
 	{
 		id: "gai-krua",
@@ -244,6 +265,7 @@ export const menuItems: MenuItem[] = [
 		description: "Stir-fried flat noodles with egg, bean sprout, and scallion",
 		price: "$17.00",
 		category: "noodles",
+		image: "/images/menu-pictures/noodles/gai-krua-noodle.jpg",
 	},
 	{
 		id: "pad-woon-sen",
@@ -252,6 +274,7 @@ export const menuItems: MenuItem[] = [
 			"Stir-fried silver noodles with egg, white onion, green onion, carrot, cabbage, bell pepper, mushroom, and bean sprout",
 		price: "$17.00",
 		category: "noodles",
+		image: "/images/menu-pictures/noodles/pad-woon-sen-noodle.jpg",
 	},
 	{
 		id: "chow-mein",
@@ -260,6 +283,7 @@ export const menuItems: MenuItem[] = [
 			"Stir-fried egg noodles with cabbage, carrot, broccoli, and mushroom with soy sauce & sesame oil",
 		price: "$17.00",
 		category: "noodles",
+		image: "/images/menu-pictures/noodles/chowmein-noodle.jpg",
 	},
 	{
 		id: "rad-na",
@@ -277,6 +301,7 @@ export const menuItems: MenuItem[] = [
 		description: "Milder curry with potato and white onion",
 		price: "$20.00",
 		category: "curries",
+		image: "/images/menu-pictures/curries/yellow-curry.jpg",
 	},
 	{
 		id: "green-curry",
@@ -285,6 +310,7 @@ export const menuItems: MenuItem[] = [
 		price: "$20.00",
 		category: "curries",
 		spicy: true,
+		image: "/images/menu-pictures/curries/green-curry.jpg",
 	},
 	{
 		id: "mussaman-curry",
@@ -293,6 +319,7 @@ export const menuItems: MenuItem[] = [
 			"Rich and flavorful curry with, potato, white onion, carrot, and peanut",
 		price: "$20.00",
 		category: "curries",
+		image: "/images/menu-pictures/curries/mussaman-curry.jpg",
 	},
 	{
 		id: "panang-curry",
@@ -300,6 +327,7 @@ export const menuItems: MenuItem[] = [
 		description: "Red curry sauce with the fresh green bean",
 		price: "$20.00",
 		category: "curries",
+		image: "/images/menu-pictures/curries/panang-curry-with-shrimp.jpg",
 	},
 	{
 		id: "pumpkin-curry",
@@ -307,6 +335,7 @@ export const menuItems: MenuItem[] = [
 		description: "Kabocha pumpkin with red curry and Thai basil",
 		price: "$20.00",
 		category: "curries",
+		image: "/images/menu-pictures/curries/pumpkin-curry.jpg",
 	},
 	{
 		id: "pineapple-curry",
@@ -315,6 +344,7 @@ export const menuItems: MenuItem[] = [
 			"Milder red curry with pineapple, bell pepper, and sweet tomato",
 		price: "$20.00",
 		category: "curries",
+		image: "/images/menu-pictures/curries/pineapple-curry.jpg",
 	},
 
 	// Stir-Fried
@@ -326,6 +356,7 @@ export const menuItems: MenuItem[] = [
 		price: "$19.00",
 		category: "stir-fried",
 		spicy: true,
+		image: "/images/menu-pictures/stir-fried/spicy-thai-basil-leave.jpg",
 	},
 	{
 		id: "ginger-pineapples",
@@ -342,6 +373,7 @@ export const menuItems: MenuItem[] = [
 			"Stir-fried white pepper with garlic sauce come with steamed veggie",
 		price: "$19.00",
 		category: "stir-fried",
+		image: "/images/menu-pictures/stir-fried/pepper-garlic.jpg",
 	},
 	{
 		id: "prik-king",
@@ -374,6 +406,7 @@ export const menuItems: MenuItem[] = [
 		price: "$19.00",
 		category: "stir-fried",
 		spicy: true,
+		image: "/images/menu-pictures/stir-fried/spicy-eggplant-with-tofu.jpg",
 	},
 	{
 		id: "baby-corn-delight",
@@ -382,6 +415,7 @@ export const menuItems: MenuItem[] = [
 			"Sauteed baby corn, mushroom, snow pea, and carrot with garlic sauce",
 		price: "$19.00",
 		category: "stir-fried",
+		image: "/images/menu-pictures/sides/baby-corn-delight.jpg",
 	},
 	{
 		id: "rama-spinach-delight",
@@ -389,6 +423,7 @@ export const menuItems: MenuItem[] = [
 		description: "Sauteed spinach, broccoli, and carrot with Thai peanut sauce",
 		price: "$19.00",
 		category: "stir-fried",
+		image: "/images/menu-pictures/sides/spinach-delight-rama.jpg",
 	},
 
 	// Fried Rice
@@ -407,6 +442,7 @@ export const menuItems: MenuItem[] = [
 			"Chicken, pineapple, egg, raisins, cashew nuts, white onion, scallions, and curry powder",
 		price: "$19.00",
 		category: "rice",
+		image: "/images/menu-pictures/rice/pineapple-fried-rice.jpg",
 	},
 	{
 		id: "spicy-basil-fried-rice",
@@ -416,6 +452,8 @@ export const menuItems: MenuItem[] = [
 		price: "$18.00",
 		category: "rice",
 		spicy: true,
+		image:
+			"/images/menu-pictures/stir-fried/spicy-basil-fried-rice-with-shrimp.jpg",
 	},
 	{
 		id: "spicy-seafood-fried-rice",
@@ -425,6 +463,7 @@ export const menuItems: MenuItem[] = [
 		price: "$28.00",
 		category: "rice",
 		spicy: true,
+		image: "/images/menu-pictures/rice/spicy-seafood-fried-rice.jpg",
 	},
 
 	// House Specialties
@@ -444,6 +483,7 @@ export const menuItems: MenuItem[] = [
 			"Boiled tender chicken over ginger garlic rice served with spicy ginger sauce and chicken broth",
 		price: "$18.00",
 		category: "special",
+		image: "/images/menu-pictures/rice/chicken-over-rice.jpg",
 	},
 	{
 		id: "somtum-combo",
@@ -462,6 +502,7 @@ export const menuItems: MenuItem[] = [
 		price: "$22.00",
 		category: "special",
 		popular: true,
+		image: "/images/menu-pictures/rice/crab-fried-rice.jpg",
 	},
 	{
 		id: "shrimp-in-the-pot",
@@ -470,6 +511,7 @@ export const menuItems: MenuItem[] = [
 			"Shrimps with glass noodle, fresh ginger, garlic, celery, and red bell pepper",
 		price: "$21.00",
 		category: "special",
+		image: "/images/menu-pictures/special/shrimp-in-the-hotpot.jpg",
 	},
 	{
 		id: "orange-chicken",
@@ -477,6 +519,7 @@ export const menuItems: MenuItem[] = [
 		description: "Crispy chicken with tangerine sauce side of steamed broccoli",
 		price: "$18.00",
 		category: "special",
+		image: "/images/menu-pictures/stir-fried/orange-chicken.jpg",
 	},
 	{
 		id: "steamed-mussels",
@@ -485,6 +528,7 @@ export const menuItems: MenuItem[] = [
 			"New Zealand mussels steaming with Thai herbs serve with (chili) garlic lime sauce",
 		price: "$19.00",
 		category: "special",
+		image: "/images/menu-pictures/special/steamed-mussels.jpg",
 	},
 	{
 		id: "spicy-curry-fish",
@@ -494,6 +538,7 @@ export const menuItems: MenuItem[] = [
 		price: "$20.00",
 		category: "special",
 		spicy: true,
+		image: "/images/menu-pictures/special/spicy-curry-fish.jpg",
 	},
 
 	// Grilled
@@ -504,6 +549,7 @@ export const menuItems: MenuItem[] = [
 			"Marinated pork shoulder, tasty slightly sweet,cut thin sliced served with spicy sauce & sliced of cucumber",
 		price: "$18.00",
 		category: "grilled",
+		image: "/images/menu-pictures/grilled/grilled-pork.jpg",
 	},
 	{
 		id: "grilled-beef-crying-tiger",
@@ -512,6 +558,7 @@ export const menuItems: MenuItem[] = [
 		price: "$26.00",
 		category: "grilled",
 		spicy: true,
+		image: "/images/menu-pictures/grilled/grilled-beef.jpg",
 	},
 	{
 		id: "grilled-shrimps",
@@ -520,6 +567,7 @@ export const menuItems: MenuItem[] = [
 			"Shrimps on skewers with chili garlic lime sauce and small salad",
 		price: "$20.00",
 		category: "grilled",
+		image: "/images/menu-pictures/grilled/grilled-shrimp.jpg",
 	},
 	{
 		id: "thai-bbq-chicken",
@@ -536,6 +584,7 @@ export const menuItems: MenuItem[] = [
 			"Grilled salmon with sweet & savory teriyaki sauce, sesame seeds, and side of steamed veggie",
 		price: "$19.00",
 		category: "grilled",
+		image: "/images/menu-pictures/stir-fried/salmon-teriyaki.jpg",
 	},
 
 	// Noodle Soups
@@ -547,6 +596,7 @@ export const menuItems: MenuItem[] = [
 		price: "$18.00",
 		category: "noodle-soups",
 		spicy: true,
+		image: "/images/menu-pictures/noodle-soups/tom-yum-thai-noodle-soup.jpg",
 	},
 	{
 		id: "tom-kha-noodle-soup",
@@ -588,6 +638,7 @@ export const menuItems: MenuItem[] = [
 		description: "",
 		price: "$5.00",
 		category: "drinks",
+		image: "/images/menu-pictures/drinks/thai-iced-tea.jpg",
 	},
 	{
 		id: "thai-iced-coffee",
@@ -595,6 +646,7 @@ export const menuItems: MenuItem[] = [
 		description: "",
 		price: "$5.00",
 		category: "drinks",
+		image: "/images/menu-pictures/drinks/thai-iced-coffee.jpg",
 	},
 	{
 		id: "house-lemonade-with-butterfly-tea",
@@ -602,6 +654,7 @@ export const menuItems: MenuItem[] = [
 		description: "",
 		price: "$5.50",
 		category: "drinks",
+		image: "/images/menu-pictures/drinks/house-lemonade-butterfly-pea-tea.jpg",
 	},
 	{
 		id: "thai-lemon-tea",
@@ -609,6 +662,7 @@ export const menuItems: MenuItem[] = [
 		description: "",
 		price: "$5.00",
 		category: "drinks",
+		image: "/images/menu-pictures/drinks/thai-lemon-tea.jpg",
 	},
 	{
 		id: "black-iced-tea",
@@ -700,6 +754,7 @@ export const menuItems: MenuItem[] = [
 		description: "",
 		price: "$7.00",
 		category: "drinks",
+		image: "/images/menu-pictures/drinks/pineapple-mojito.jpg",
 	},
 	{
 		id: "honey-green-tea-lemonade",
@@ -717,6 +772,7 @@ export const menuItems: MenuItem[] = [
 		price: "$12.00",
 		category: "desserts",
 		popular: true,
+		image: "/images/menu-pictures/desserts/mango-and-sticky-rice.jpg",
 	},
 	{
 		id: "coconut-iced-cream-and-sticky-rice",
@@ -724,6 +780,8 @@ export const menuItems: MenuItem[] = [
 		description: "Grounded peanut topping",
 		price: "$12.00",
 		category: "desserts",
+		image:
+			"/images/menu-pictures/desserts/coconut-ice-cream-with-sticky-rice.jpg",
 	},
 	{
 		id: "iced-cream",
