@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Utensils, Leaf, IceCream } from "lucide-react";
+import React from "react";
 
+// ... (Your MenuItem interface and menuItems/categories arrays remain the same) ...
 interface MenuItem {
 	id: string;
 	name: string;
@@ -392,10 +394,27 @@ const categories = [
 export default function MenuSection() {
 	const [selectedCategory, setSelectedCategory] = useState("all");
 
-	const filteredItems =
+	// Memoize the grouped menu items for performance
+	const groupedMenuItems = useMemo(() => {
+		const grouped: { [key: string]: MenuItem[] } = {};
+		const itemsToGroup =
+			selectedCategory === "all"
+				? menuItems
+				: menuItems.filter((item) => item.category === selectedCategory);
+
+		for (const item of itemsToGroup) {
+			if (!grouped[item.category]) {
+				grouped[item.category] = [];
+			}
+			grouped[item.category].push(item);
+		}
+		return grouped;
+	}, [selectedCategory]);
+
+	const categoriesToRender =
 		selectedCategory === "all"
-			? menuItems
-			: menuItems.filter((item) => item.category === selectedCategory);
+			? categories
+			: categories.filter((c) => c.id === selectedCategory);
 
 	return (
 		<section className="py-2 md:py-3">
@@ -428,23 +447,29 @@ export default function MenuSection() {
 				</div>
 
 				{/* Menu Items */}
-				<div className="space-y-8">
-					{categories.map((category) => {
-						const categoryItems = filteredItems.filter(
-							(item) => item.category === category.id
-						);
+				<div>
+					{categoriesToRender.map((category, index) => {
+						const categoryItems = groupedMenuItems[category.id];
 
-						if (categoryItems.length === 0) return null;
+						if (!categoryItems || categoryItems.length === 0) return null;
 
 						return (
-							<div key={category.id} className="space-y-4">
-								<div className="flex items-center gap-3">
-									<category.icon className="w-6 h-6 text-primary" />
-									<h2 className="text-2xl font-bold text-foreground">
-										{category.name}
-									</h2>
+							// Use React.Fragment to avoid adding an extra div that constrains the sticky header
+							<React.Fragment key={category.id}>
+								<div
+									// Add margin-top for spacing, but not on the first header
+									className={`sticky top-16 z-40 bg-background/95 backdrop-blur-sm py-2 -mx-4 px-4 ${
+										index > 0 ? "mt-8" : ""
+									}`}
+								>
+									<div className="flex items-center gap-3">
+										<category.icon className="w-6 h-6 text-primary" />
+										<h2 className="text-2xl font-bold text-foreground">
+											{category.name}
+										</h2>
+									</div>
 								</div>
-								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
 									{categoryItems.map((item) => (
 										<Card
 											key={item.id}
@@ -502,7 +527,7 @@ export default function MenuSection() {
 										</Card>
 									))}
 								</div>
-							</div>
+							</React.Fragment>
 						);
 					})}
 				</div>
