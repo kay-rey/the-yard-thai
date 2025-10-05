@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
 	return (
-		<section className="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
+		<section className="relative h-[600px] sm:h-[700px] md:h-[800px] lg:h-[calc(100vh-4rem)] w-full overflow-hidden">
 			{/* Background Image with Overlay */}
 			<div className="absolute inset-0">
 				<Image
