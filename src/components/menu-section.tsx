@@ -3,6 +3,8 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import {
 	Dialog,
 	DialogContent,
@@ -15,8 +17,6 @@ import { MenuItemCard } from "@/components/menu-item-card";
 
 export default function MenuSection() {
 	const [selectedCategory, setSelectedCategory] = useState("all");
-
-	// REFINEMENT 1: Simplified state. We only need to know which item is selected.
 	const [selectedMenuItem, setSelectedMenuItem] = useState<MenuItem | null>(
 		null
 	);
@@ -45,7 +45,7 @@ export default function MenuSection() {
 	return (
 		<section className="py-2 md:py-3">
 			<div className="container mx-auto px-4">
-				{/* Category Filter */}
+				{/* --- CODE FOR CATEGORY BUTTONS RESTORED BELOW --- */}
 				<div className="flex flex-wrap justify-center gap-2 mb-8">
 					<Button
 						variant={selectedCategory === "all" ? "default" : "outline"}
@@ -101,7 +101,6 @@ export default function MenuSection() {
 									</div>
 								</div>
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
-									{/* REFINEMENT 2: Using the extracted component */}
 									{categoryItems.map((item) => (
 										<MenuItemCard
 											key={item.id}
@@ -115,15 +114,32 @@ export default function MenuSection() {
 					})}
 				</div>
 
-				{/* Order Online CTA */}
+				{/* --- CODE FOR ORDER ONLINE CTA RESTORED BELOW --- */}
 				<div className="text-center mt-16">
-					{/* ... (CTA Card remains the same) ... */}
+					<Card className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
+						<CardContent className="py-8">
+							<h3 className="text-2xl font-bold text-foreground mb-4">
+								Ready to Order?
+							</h3>
+							<p className="text-muted-foreground mb-6">
+								Experience authentic Thai flavors delivered to your door
+							</p>
+							<Button size="lg" className="text-lg font-bold" asChild>
+								<a
+									href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Order Online Now
+								</a>
+							</Button>
+						</CardContent>
+					</Card>
 				</div>
 			</div>
 
 			{/* Menu Item Modal */}
 			<Dialog
-				// REFINEMENT 1: State is now derived and the close handler is cleaner.
 				open={!!selectedMenuItem}
 				onOpenChange={(isOpen) => {
 					if (!isOpen) {
@@ -131,7 +147,11 @@ export default function MenuSection() {
 					}
 				}}
 			>
-				<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-white">
+				<DialogContent
+					className={`transition-all duration-300 max-h-[90vh] overflow-y-auto bg-white ${
+						selectedMenuItem?.image ? "max-w-5xl" : "max-w-md"
+					}`}
+				>
 					{selectedMenuItem && (
 						<>
 							<DialogHeader>
@@ -140,27 +160,59 @@ export default function MenuSection() {
 								</DialogTitle>
 							</DialogHeader>
 
-							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
+							<div
+								className={
+									selectedMenuItem.image
+										? "flex flex-col lg:flex-row gap-8 pt-4"
+										: "pt-4"
+								}
+							>
 								{selectedMenuItem.image && (
-									<div className="relative h-80 lg:h-96 w-full rounded-lg overflow-hidden">
+									<div className="relative w-full lg:w-1/2 rounded-lg overflow-hidden aspect-[4/3]">
 										<Image
 											src={selectedMenuItem.image}
 											alt={selectedMenuItem.name}
 											fill
-											className="object-cover"
+											className="object-contain"
 											sizes="(max-width: 1024px) 90vw, 50vw"
-											// REFINEMENT 3: Removed 'priority' as this image is not visible on initial page load.
 										/>
 									</div>
 								)}
 
-								<div className="flex flex-col space-y-6">
+								<div
+									className={`flex flex-col space-y-6 ${
+										selectedMenuItem.image ? "lg:w-1/2" : "w-full"
+									}`}
+								>
 									<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 										<div className="text-3xl font-bold text-primary">
 											{selectedMenuItem.price}
 										</div>
 										<div className="flex flex-wrap gap-2">
-											{/* ... (Badges remain the same) ... */}
+											{selectedMenuItem.popular && (
+												<Badge
+													variant="secondary"
+													className="bg-primary text-primary-foreground text-sm px-3 py-1"
+												>
+													Popular
+												</Badge>
+											)}
+											{selectedMenuItem.spicy && (
+												<Badge
+													variant="destructive"
+													className="text-sm px-3 py-1"
+												>
+													🌶️ Spicy
+												</Badge>
+											)}
+											{selectedMenuItem.vegetarian && (
+												<Badge
+													variant="outline"
+													className="border-green-500 text-green-600 text-sm px-3 py-1"
+												>
+													🌱 Vegetarian
+												</Badge>
+											)}
 										</div>
 									</div>
 
