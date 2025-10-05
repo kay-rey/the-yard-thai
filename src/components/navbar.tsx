@@ -76,7 +76,7 @@ export default function Navbar() {
 					<Button
 						variant="outline"
 						onClick={handleCallClick}
-						className="text-lg font-bold flex items-center space-x-2"
+						className="text-lg font-bold flex items-center space-x-2 cursor-pointer"
 					>
 						<Phone className="h-4 w-4" />
 						<span>Call (818) 532-7272</span>
@@ -97,7 +97,7 @@ export default function Navbar() {
 					<Button
 						variant="outline"
 						onClick={handleCallClick}
-						className="text-sm font-bold flex items-center space-x-1"
+						className="text-sm font-bold flex items-center space-x-1 cursor-pointer"
 					>
 						<Phone className="h-4 w-4" />
 						<span>Call</span>
@@ -154,7 +154,7 @@ export default function Navbar() {
 					<Button
 						variant="outline"
 						onClick={handleCallClick}
-						className="w-full justify-start text-lg font-bold flex items-center space-x-2"
+						className="w-full justify-start text-lg font-bold flex items-center space-x-2 cursor-pointer"
 					>
 						<Phone className="h-4 w-4" />
 						<span>Call (818) 532-7272</span>
