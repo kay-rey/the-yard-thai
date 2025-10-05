@@ -9,7 +9,7 @@ export default function AboutSection() {
 					<div className="order-2 lg:order-1 flex items-center">
 						<div className="relative h-80 w-full overflow-hidden rounded-lg lg:h-96">
 							<Image
-								src="/images/intererior/IMG_6891.jpeg"
+								src="/images/interior/IMG_6891.jpeg"
 								alt="Cozy interior of The Yard Thai restaurant with warm lighting and traditional Thai decor"
 								fill
 								className="object-cover object-bottom"

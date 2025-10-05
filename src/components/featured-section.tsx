@@ -20,7 +20,7 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
 						<div className="relative">
 							<Image
-								src="/images/menu-pictures/missing-pictures/Green curry.jpg"
+								src="/images/menu-pictures/green-curry.jpg"
 								alt="Green Curry"
 								width={300}
 								height={192}
@@ -38,7 +38,7 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
 						<div className="relative">
 							<Image
-								src="/images/menu-pictures/Padthai.jpg"
+								src="/images/menu-pictures/padthai.jpg"
 								alt="Pad Thai"
 								width={300}
 								height={192}
@@ -56,7 +56,7 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
 						<div className="relative">
 							<Image
-								src="/images/menu-pictures/Mango & sticky rice.jpg"
+								src="/images/menu-pictures/mango-and-sticky-rice.jpg"
 								alt="Mango Sticky Rice"
 								width={300}
 								height={192}
@@ -74,7 +74,7 @@ export default function FeaturedSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
 						<div className="relative">
 							<Image
-								src="/images/menu-pictures/missing-pictures/Tom yum soup.jpg"
+								src="/images/menu-pictures/tom-yum-soup.jpg"
 								alt="Tom Yum Soup"
 								width={300}
 								height={192}
