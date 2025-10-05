@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +14,7 @@ import {
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
+	const pathname = usePathname();
 
 	const handleLinkClick = () => {
 		setIsOpen(false);
@@ -52,14 +54,22 @@ export default function Navbar() {
 					<Button
 						variant="link"
 						asChild
-						className="text-foreground hover:text-primary text-lg font-bold"
+						className={`text-lg font-bold ${
+							pathname === "/"
+								? "text-primary underline"
+								: "text-foreground hover:text-primary"
+						}`}
 					>
 						<Link href="/">Home</Link>
 					</Button>
 					<Button
 						variant="link"
 						asChild
-						className="text-foreground hover:text-primary text-lg font-bold"
+						className={`text-lg font-bold ${
+							pathname === "/menu"
+								? "text-primary underline"
+								: "text-foreground hover:text-primary"
+						}`}
 					>
 						<Link href="/menu">Menu</Link>
 					</Button>
@@ -120,7 +130,11 @@ export default function Navbar() {
 					<Button
 						variant="link"
 						asChild
-						className="w-full justify-start text-foreground hover:text-primary text-lg font-bold"
+						className={`w-full justify-start text-lg font-bold ${
+							pathname === "/"
+								? "text-primary underline"
+								: "text-foreground hover:text-primary"
+						}`}
 						onClick={handleLinkClick}
 					>
 						<Link href="/">Home</Link>
@@ -128,7 +142,11 @@ export default function Navbar() {
 					<Button
 						variant="link"
 						asChild
-						className="w-full justify-start text-foreground hover:text-primary text-lg font-bold"
+						className={`w-full justify-start text-lg font-bold ${
+							pathname === "/menu"
+								? "text-primary underline"
+								: "text-foreground hover:text-primary"
+						}`}
 						onClick={handleLinkClick}
 					>
 						<Link href="/menu">Menu</Link>
