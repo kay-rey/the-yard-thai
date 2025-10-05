@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lora, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+const lora = Lora({
+	variable: "--font-lora",
 	subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const nunitoSans = Nunito_Sans({
+	variable: "--font-nunito-sans",
 	subsets: ["latin"],
+	weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://the-yard-thai.vercel.app"),
 	title: "The Yard Thai Cuisine - Authentic Thai Food",
 	description:
 		"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
@@ -59,9 +62,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
+			<body className={`${lora.variable} ${nunitoSans.variable} antialiased`}>
 				<Navbar />
 				<main>{children}</main>
 				<Footer />
