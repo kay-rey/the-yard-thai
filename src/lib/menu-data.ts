@@ -1,4 +1,3 @@
-import { HandPlatter, Leaf, Utensils, IceCream, Soup, CookingPot, Flame, ChefHat, Grid3X3, Star } from "lucide-react";
 import { menuItems as menuItemsData } from "@/data/menu-items";
 import { categories as categoriesData } from "@/data/categories";
 
@@ -15,33 +14,12 @@ export interface MenuItem {
 	image?: string;
 }
 
-export interface Category {
-	id: string;
-	name: string;
-	icon: string;
-}
-
-// Icon mapping
-const iconMap = {
-	HandPlatter,
-	Leaf,
-	Utensils,
-	IceCream,
-	Soup,
-	CookingPot,
-	Flame,
-	ChefHat,
-	Grid3X3,
-	Star,
-};
+// Re-export the Category type and categories from the data file
+export type { Category } from "@/data/categories";
 
 // Load and process menu data
 export const menuItems: MenuItem[] = menuItemsData;
-
-export const categories = categoriesData.map((category) => ({
-	...category,
-	icon: iconMap[category.icon as keyof typeof iconMap],
-}));
+export const categories = categoriesData;
 
 // Utility functions
 export const getMenuItemsByCategory = (categoryId: string): MenuItem[] => {

@@ -1,54 +1,88 @@
-import { Category } from "@/lib/menu-data";
+import {
+	HandPlatter,
+	Leaf,
+	Utensils,
+	IceCream,
+	Soup,
+	CookingPot,
+	Flame,
+	ChefHat,
+	Grid3X3,
+	Star,
+    CupSoda,
+    Waves,
+} from "lucide-react";
+
+export interface Category {
+	id: string;
+	name: string;
+	icon: React.ComponentType<{ className?: string }>;
+}
 
 export const categories: Category[] = [
 	{
 		id: "appetizers",
 		name: "Appetizers",
-		icon: "HandPlatter",
-	},
-	{
-		id: "salads",
-		name: "Salads",
-		icon: "Leaf",
+		icon: HandPlatter,
 	},
 	{
 		id: "soups",
 		name: "Soups",
-		icon: "Soup",
+		icon: Soup,
 	},
 	{
-		id: "rice",
-		name: "Rice Dishes",
-		icon: "CookingPot",
+		id: "salads",
+		name: "Salads",
+		icon: Leaf,
 	},
 	{
 		id: "noodles",
 		name: "Noodles",
-		icon: "Soup",
+		icon: Waves,
 	},
 	{
 		id: "curries",
 		name: "Curries",
-		icon: "Flame",
+		icon: Flame,
 	},
 	{
 		id: "stir-fried",
 		name: "Stir-Fried",
-		icon: "ChefHat",
+		icon: ChefHat,
+	},
+	{
+		id: "rice",
+		name: "Fried Rice",
+		icon: CookingPot,
+	},
+	{
+		id: "special",
+		name: "House Specialties",
+		icon: Star,
 	},
 	{
 		id: "grilled",
 		name: "Grilled",
-		icon: "Grid3X3",
+		icon: Grid3X3,
 	},
 	{
-		id: "special",
-		name: "Special Dishes",
-		icon: "Star",
+		id: "noodle-soups",
+		name: "Noodle Soups",
+		icon: Soup,
+	},
+	{
+		id: "drinks",
+		name: "Drinks",
+		icon: CupSoda,
 	},
 	{
 		id: "desserts",
 		name: "Desserts",
-		icon: "IceCream",
+		icon: IceCream,
+	},
+	{
+		id: "sides",
+		name: "Sides",
+		icon: Utensils,
 	},
 ];
