@@ -6,7 +6,7 @@ export default function MenuPage() {
 			{/* Hero Section */}
 			<section className="bg-gradient-to-b from-primary/10 to-background py-6 md:py-8">
 				<div className="container mx-auto px-4 text-center">
-					<h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
+					<h1 className="text-4xl md:text-6xl text-foreground mb-4">
 						Our Menu
 					</h1>
 					<p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">

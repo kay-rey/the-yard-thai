@@ -95,7 +95,7 @@ export default function MenuSection() {
 								>
 									<div className="flex items-center gap-3">
 										<category.icon className="w-6 h-6 text-primary" />
-										<h2 className="text-2xl font-bold text-foreground">
+										<h2 className="text-2xl text-foreground">
 											{category.name}
 										</h2>
 									</div>
@@ -155,7 +155,7 @@ export default function MenuSection() {
 					{selectedMenuItem && (
 						<>
 							<DialogHeader>
-								<DialogTitle className="text-3xl font-bold text-foreground pr-8">
+								<DialogTitle className="text-3xl text-foreground pr-8">
 									{selectedMenuItem.name}
 								</DialogTitle>
 							</DialogHeader>
@@ -220,7 +220,7 @@ export default function MenuSection() {
 									</div>
 
 									<div>
-										<h3 className="text-xl font-semibold text-foreground mb-3">
+										<h3 className="text-xl text-foreground mb-3">
 											Description
 										</h3>
 										<p className="text-muted-foreground text-base leading-relaxed">

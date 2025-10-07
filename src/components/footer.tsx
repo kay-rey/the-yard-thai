@@ -10,17 +10,17 @@ export default function Footer() {
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
 					{/* Restaurant Info */}
 					<div className="space-y-4">
-						<h3 className="text-xl font-bold text-background">
+						<h3 className="text-xl text-background">
 							The Yard Thai Cuisine
 						</h3>
 						<p className="text-background/90 text-sm">
-							Women-owned & operated • Fresh ingredients • Agoura Hills, CA
+							A Taste of Tradition
 						</p>
 					</div>
 
 					{/* Hours */}
 					<div className="space-y-4">
-						<h4 className="text-lg font-semibold text-background">Hours</h4>
+						<h4 className="text-lg text-background">Hours</h4>
 						{/* --- UPDATED HOURS SECTION --- */}
 						<div className="text-background/90 text-sm space-y-1">
 							<p>Mon - Thu: 11:00 AM - 2:30 PM, 4:00 PM - 8:15 PM</p>
@@ -31,7 +31,7 @@ export default function Footer() {
 
 					{/* Social Media */}
 					<div className="space-y-4">
-						<h4 className="text-lg font-semibold text-background">Follow Us</h4>
+						<h4 className="text-lg text-background">Follow Us</h4>
 						<div className="flex justify-center md:justify-start space-x-4">
 							<Link
 								href="https://instagram.com"

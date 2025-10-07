@@ -8,7 +8,7 @@ export default function FeaturedSection() {
 		<section className="pt-8 pb-16 px-4 bg-muted/50">
 			<div className="max-w-6xl mx-auto">
 				<div className="text-center mb-12">
-					<h2 className="text-3xl md:text-4xl font-bold text-accent mb-4 text-balance">
+					<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance">
 						Featured Dishes
 					</h2>
 					<p className="text-lg text-muted-foreground text-balance">
@@ -28,7 +28,7 @@ export default function FeaturedSection() {
 							/>
 						</div>
 						<CardContent className="p-4">
-							<h3 className="font-semibold text-lg mb-2">Green Curry</h3>
+							<h3 className="text-lg mb-2">Green Curry</h3>
 							<p className="text-sm text-muted-foreground">
 								Aromatic coconut curry with fresh herbs and vegetables
 							</p>
@@ -46,7 +46,7 @@ export default function FeaturedSection() {
 							/>
 						</div>
 						<CardContent className="p-4">
-							<h3 className="font-semibold text-lg mb-2">Pad Thai</h3>
+							<h3 className="text-lg mb-2">Pad Thai</h3>
 							<p className="text-sm text-muted-foreground">
 								Classic stir-fried noodles with tamarind and peanuts
 							</p>
@@ -64,7 +64,7 @@ export default function FeaturedSection() {
 							/>
 						</div>
 						<CardContent className="p-4">
-							<h3 className="font-semibold text-lg mb-2">Mango Sticky Rice</h3>
+							<h3 className="text-lg mb-2">Mango Sticky Rice</h3>
 							<p className="text-sm text-muted-foreground">
 								Sweet coconut rice with fresh mango slices
 							</p>
@@ -82,7 +82,7 @@ export default function FeaturedSection() {
 							/>
 						</div>
 						<CardContent className="p-4">
-							<h3 className="font-semibold text-lg mb-2">Tom Yum Soup</h3>
+							<h3 className="text-lg mb-2">Tom Yum Soup</h3>
 							<p className="text-sm text-muted-foreground">
 								Spicy and sour soup with fresh herbs and shrimp
 							</p>
