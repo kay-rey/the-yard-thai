@@ -23,12 +23,10 @@ export default function HeroSection() {
 			<div className="relative z-10 flex h-full items-center justify-center">
 				<div className="mx-auto max-w-4xl px-4 text-center text-background">
 					{/* Main Heading */}
-					<h1 className="mb-6 text-7xl ">
-						The Yard Thai Cuisine
-					</h1>
+					<h1 className="mb-6 text-7xl md:text-8xl">The Yard Thai Cuisine</h1>
 
 					{/* Subheading */}
-					<p className="mb-8 text-lg font-medium text-background/90 sm:text-xl md:text-2xl">
+					<p className="mb-8 text-4xl md:text-5xl font-parisienne">
 						A Taste of Tradition
 					</p>
 

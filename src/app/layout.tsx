@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Nunito_Sans } from "next/font/google";
+import { Lora, Nunito_Sans, Parisienne } from "next/font/google";
 import LocalFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar";
@@ -22,6 +22,12 @@ const nunitoSans = Nunito_Sans({
 	variable: "--font-nunito-sans",
 	subsets: ["latin"],
 	weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
+const parisienne = Parisienne({
+	variable: "--font-parisienne",
+	subsets: ["latin"],
+	weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -71,7 +77,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${lora.variable} ${nunitoSans.variable} ${myFont.variable} antialiased`}
+				className={`${lora.variable} ${nunitoSans.variable} ${myFont.variable} ${parisienne.variable} antialiased`}
 			>
 				<Navbar />
 				<main>{children}</main>
