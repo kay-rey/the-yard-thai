@@ -145,22 +145,6 @@ export default function HeroSection() {
 							</Link>
 						</Button>
 					</div>
-
-					{/* Scroll Indicator */}
-					<div
-						className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1200 ${
-							isVisible
-								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-4"
-						}`}
-					>
-						<div className="flex flex-col items-center gap-2 text-white/60">
-							<span className="text-sm">Scroll to explore</span>
-							<div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-								<div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
