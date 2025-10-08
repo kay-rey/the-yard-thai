@@ -140,3 +140,65 @@
 		@apply font-serif;
 	}
 }
+
+/* Custom animations for hero section */
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-in-up {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.animate-fade-in {
+	animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+	animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-float {
+	animation: float 3s ease-in-out infinite;
+}
+
+/* Enhanced pulse animation for decorative elements */
+@keyframes enhanced-pulse {
+	0%,
+	100% {
+		opacity: 0.1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.3;
+		transform: scale(1.05);
+	}
+}
+
+.animate-enhanced-pulse {
+	animation: enhanced-pulse 2s ease-in-out infinite;
+}
