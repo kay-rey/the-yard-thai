@@ -7,7 +7,7 @@ export default function AboutSection() {
 				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
 					{/* Left Column - Image */}
 					<div className="order-2 lg:order-1 flex items-center">
-						<div className="relative h-80 w-full overflow-hidden rounded-lg lg:h-96">
+						<div className="relative h-80 w-full overflow-hidden rounded-lg lg:h-96 scroll-animate slide-in-left delay-200">
 							<Image
 								src="/images/interior/IMG_6891.jpeg"
 								alt="Cozy interior of The Yard Thai restaurant with warm lighting and traditional Thai decor"
@@ -20,12 +20,12 @@ export default function AboutSection() {
 
 					{/* Right Column - Content */}
 					<div className="order-1 lg:order-2 flex flex-col justify-center">
-						<h2 className="text-center mb-6 text-3xl text-accent sm:text-4xl lg:text-5xl">
+						<h2 className="text-center mb-6 text-3xl text-accent sm:text-4xl lg:text-5xl scroll-animate slide-in-up delay-100">
 							Our Story
 						</h2>
 
 						<div className="space-y-4 text-muted-foreground">
-							<p className="text-lg leading-relaxed">
+							<p className="text-lg leading-relaxed scroll-animate slide-in-up delay-200">
 								Welcome to The Yard Thai Cuisine, a women-owned and operated
 								restaurant in the heart of Agoura Hills, CA. We are passionate
 								about bringing you the authentic flavors of Thailand, crafted
@@ -33,7 +33,7 @@ export default function AboutSection() {
 								passed down through generations.
 							</p>
 
-							<p className="text-lg leading-relaxed">
+							<p className="text-lg leading-relaxed scroll-animate slide-in-up delay-200">
 								Every dish we serve celebrates Thailand&apos;s rich culinary
 								heritage, from our complex signature curries to the perfect
 								balance of sweet, sour, salty, and spicy in our classic pad

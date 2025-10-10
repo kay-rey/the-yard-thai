@@ -83,6 +83,42 @@ export default function RootLayout({
 				<main>{children}</main>
 				<Footer />
 				<Analytics />
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							// Scroll-triggered animations using Intersection Observer
+							function initScrollAnimations() {
+								if (!('IntersectionObserver' in window)) return;
+								
+								const observer = new IntersectionObserver(
+									(entries) => {
+										entries.forEach((entry) => {
+											if (entry.isIntersecting) {
+												entry.target.classList.add('in-view');
+												observer.unobserve(entry.target);
+											}
+										});
+									},
+									{
+										threshold: 0.2,
+										rootMargin: '0px 0px -50px 0px',
+									}
+								);
+								
+								const animatedElements = document.querySelectorAll('.scroll-animate');
+								animatedElements.forEach((element) => {
+									observer.observe(element);
+								});
+							}
+							
+							if (document.readyState === 'loading') {
+								document.addEventListener('DOMContentLoaded', initScrollAnimations);
+							} else {
+								initScrollAnimations();
+							}
+						`,
+					}}
+				/>
 			</body>
 		</html>
 	);

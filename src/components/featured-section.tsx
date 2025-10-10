@@ -8,16 +8,16 @@ export default function FeaturedSection() {
 		<section className="pt-8 pb-16 px-4 bg-muted/50">
 			<div className="max-w-6xl mx-auto">
 				<div className="text-center mb-12">
-					<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance">
+					<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance scroll-animate slide-in-up delay-100">
 						Featured Dishes
 					</h2>
-					<p className="text-lg text-muted-foreground text-balance">
+					<p className="text-lg text-muted-foreground text-balance scroll-animate slide-in-up delay-200">
 						Discover our most popular authentic Thai creations
 					</p>
 				</div>
 
 				<div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
+					<Card className="group hover:shadow-lg transition-shadow duration-200 p-0 overflow-hidden scroll-animate scale-in delay-200">
 						<div className="relative">
 							<Image
 								src="/images/menu-pictures/curries/green-curry.jpg"
@@ -35,7 +35,7 @@ export default function FeaturedSection() {
 						</CardContent>
 					</Card>
 
-					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
+					<Card className="group hover:shadow-lg transition-shadow duration-200 p-0 overflow-hidden scroll-animate scale-in delay-200">
 						<div className="relative">
 							<Image
 								src="/images/menu-pictures/noodles/padthai.jpg"
@@ -53,7 +53,7 @@ export default function FeaturedSection() {
 						</CardContent>
 					</Card>
 
-					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
+					<Card className="group hover:shadow-lg transition-shadow duration-200 p-0 overflow-hidden scroll-animate scale-in delay-200">
 						<div className="relative">
 							<Image
 								src="/images/menu-pictures/desserts/mango-and-sticky-rice.jpg"
@@ -71,7 +71,7 @@ export default function FeaturedSection() {
 						</CardContent>
 					</Card>
 
-					<Card className="group hover:shadow-lg transition-shadow duration-300 p-0 overflow-hidden">
+					<Card className="group hover:shadow-lg transition-shadow duration-200 p-0 overflow-hidden scroll-animate scale-in delay-200">
 						<div className="relative">
 							<Image
 								src="/images/menu-pictures/soups/tom-yum-soup.jpg"
@@ -90,7 +90,7 @@ export default function FeaturedSection() {
 					</Card>
 				</div>
 
-				<div className="text-center mt-12">
+				<div className="text-center mt-12 scroll-animate slide-in-up delay-200">
 					<Button
 						variant="default"
 						asChild
