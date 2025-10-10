@@ -53,7 +53,7 @@
 	--warm-amber: #f39c12; /* Secondary - Vibrant saffron, golden spices */
 	--terracotta: #e67e22; /* Accent - Warm golden earth, clay pottery */
 	--light-cream: #fff8eb; /* Neutral - Warm off-white */
-	--charcoal: #8b4513; /* Text - Rich golden brown, dark earth */
+	--charcoal: #a1652d; /* Text - Rich golden brown, dark earth */
 
 	/* Semantic color mappings */
 	--background: var(--light-cream);
@@ -336,10 +336,10 @@
 		transform: translateX(1px);
 	}
 	98% {
-		transform: translateX(-1px);
+		transform: translateX(-2px);
 	}
 	99% {
-		transform: translateX(1px);
+		transform: translateX(2px);
 	}
 	100% {
 		transform: translateX(0);
