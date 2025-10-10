@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
+import { generateRestaurantStructuredData } from "@/lib/structured-data";
 
 const myFont = LocalFont({
 	src: "./fonts/coolvetica-rg.otf",
@@ -32,10 +33,42 @@ const parisienne = Parisienne({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://the-yard-thai.vercel.app"),
-	title: "The Yard Thai Cuisine - Authentic Thai Food",
+	metadataBase: new URL("https://theyardthai.com"),
+	title: {
+		default: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills",
+		template: "%s | The Yard Thai Cuisine",
+	},
 	description:
-		"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
+		"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine in Agoura Hills, CA. Fresh ingredients, traditional recipes, and exceptional taste. Best Thai restaurant near you.",
+	keywords: [
+		"Thai restaurant",
+		"Agoura Hills Thai food",
+		"authentic Thai cuisine",
+		"pad thai",
+		"Thai curry",
+		"best Thai restaurant",
+		"Thai food near me",
+		"Agoura Hills restaurant",
+		"California Thai food",
+		"traditional Thai recipes",
+	],
+	alternates: {
+		canonical: "https://theyardthai.com",
+		languages: {
+			"en-US": "https://theyardthai.com",
+		},
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
 	icons: {
 		icon: [
 			{ url: "/images/logo/FullLogo.ico", sizes: "any" },
@@ -45,14 +78,14 @@ export const metadata: Metadata = {
 		apple: "/images/logo/FullLogo.png",
 	},
 	openGraph: {
-		title: "The Yard Thai Cuisine - Authentic Thai Food",
+		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills",
 		description:
-			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
-		url: "https://the-yard-thai.vercel.app", // Update this with your actual domain
+			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine in Agoura Hills, CA. Fresh ingredients, traditional recipes, and exceptional taste.",
+		url: "https://theyardthai.com",
 		siteName: "The Yard Thai Cuisine",
 		images: [
 			{
-				url: "/images/logo/logowithbackground.webp",
+				url: "https://theyardthai.com/images/logo/logowithbackground.webp",
 				width: 1200,
 				height: 630,
 				alt: "The Yard Thai Cuisine - Delicious Thai food including pad thai, curry, and fresh vegetables",
@@ -63,10 +96,16 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "The Yard Thai Cuisine - Authentic Thai Food",
+		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills",
 		description:
-			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
-		images: ["/images/logo/theyardheropicture.webp"],
+			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine in Agoura Hills, CA. Fresh ingredients, traditional recipes, and exceptional taste.",
+		images: ["https://theyardthai.com/images/logo/theyardheropicture.webp"],
+	},
+	verification: {
+		google: "your-google-verification-code", // Replace with actual verification code
+	},
+	other: {
+		"theme-color": "#F4D03F",
 	},
 };
 
@@ -80,6 +119,12 @@ export default function RootLayout({
 			<body
 				className={`${lora.variable} ${nunitoSans.variable} ${myFont.variable} ${parisienne.variable} antialiased`}
 			>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(generateRestaurantStructuredData()),
+					}}
+				/>
 				<Navbar />
 				<main>{children}</main>
 				<Footer />

@@ -1,4 +1,43 @@
+import type { Metadata } from "next";
 import MenuSection from "@/components/menu-section";
+
+export const metadata: Metadata = {
+	title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
+	description:
+		"Explore our authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste at The Yard Thai Cuisine in Agoura Hills.",
+	keywords: [
+		"Thai menu",
+		"pad thai menu",
+		"Thai curry menu",
+		"noodle dishes",
+		"Thai appetizers",
+		"authentic Thai food",
+		"Thai restaurant menu",
+		"Agoura Hills menu",
+		"traditional Thai dishes",
+		"Thai cuisine menu",
+	],
+	openGraph: {
+		title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
+		description:
+			"Explore our authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste.",
+		url: "https://theyardthai.com/menu",
+		images: [
+			{
+				url: "https://theyardthai.com/images/logo/logowithbackground.webp",
+				width: 1200,
+				height: 630,
+				alt: "The Yard Thai Cuisine menu featuring authentic Thai dishes",
+			},
+		],
+	},
+	twitter: {
+		title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
+		description:
+			"Explore our authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste.",
+		images: ["https://theyardthai.com/images/logo/logowithbackground.webp"],
+	},
+};
 
 export default function MenuPage() {
 	return (
