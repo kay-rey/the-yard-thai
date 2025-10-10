@@ -11,10 +11,13 @@ import {
 	CollapsibleContent,
 	CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { getStoreStatus } from "@/lib/store-hours";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const pathname = usePathname();
+
+	const storeStatus = getStoreStatus();
 
 	const handleLinkClick = () => {
 		setIsOpen(false);
@@ -33,21 +36,35 @@ export default function Navbar() {
 		>
 			{/* Main navbar content */}
 			<div className="flex h-16 items-center justify-between px-4 md:px-6">
-				{/* Logo */}
-				<Link
-					href="/"
-					className="flex items-center space-x-3"
-					onClick={handleLinkClick}
-				>
-					<Image
-						src="/images/logo/FullLogo.webp"
-						alt="The Yard Thai Logo"
-						width={120}
-						height={40}
-						className="h-15 w-auto"
-						priority
-					/>
-				</Link>
+				{/* Logo and Status */}
+				<div className="flex items-center space-x-4">
+					<Link
+						href="/"
+						className="flex items-center space-x-3"
+						onClick={handleLinkClick}
+					>
+						<Image
+							src="/images/logo/FullLogo.webp"
+							alt="The Yard Thai Logo"
+							width={120}
+							height={40}
+							className="h-15 w-auto"
+							priority
+						/>
+					</Link>
+
+					{/* Store Status Indicator */}
+					<div className="flex items-center space-x-2">
+						<div
+							className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full ${storeStatus.circleColor}`}
+						></div>
+						<span
+							className={`text-xs md:text-sm font-medium ${storeStatus.textColor}`}
+						>
+							{storeStatus.text}
+						</span>
+					</div>
+				</div>
 
 				{/* Desktop Navigation */}
 				<nav className="hidden md:flex items-center space-x-6">
