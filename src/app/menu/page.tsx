@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 		url: "https://theyardthai.com/menu",
 		images: [
 			{
-				url: "https://theyardthai.com/images/logo/logowithbackground.webp",
+				url: "https://theyardthai.com/images/logo/FullLogo.png",
 				width: 1200,
 				height: 630,
 				alt: "The Yard Thai Cuisine - Authentic Thai restaurant logo",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 		title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
 		description:
 			"Explore our authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste.",
-		images: ["https://theyardthai.com/images/logo/logowithbackground.webp"],
+		images: ["https://theyardthai.com/images/logo/FullLogo.png"],
 	},
 };
 

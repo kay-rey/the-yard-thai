@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		url: "https://theyardthai.com",
 		images: [
 			{
-				url: "https://theyardthai.com/images/logo/logowithbackground.webp",
+				url: "https://theyardthai.com/images/logo/FullLogo.png",
 				width: 1200,
 				height: 630,
 				alt: "The Yard Thai Cuisine - Authentic Thai restaurant logo",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills, CA",
 		description:
 			"Experience the best authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
-		images: ["https://theyardthai.com/images/logo/logowithbackground.webp"],
+		images: ["https://theyardthai.com/images/logo/FullLogo.png"],
 	},
 };
 

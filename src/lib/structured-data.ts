@@ -171,8 +171,8 @@ export function generateRestaurantStructuredData() {
 		acceptsReservations: true,
 		hasMenu: "https://theyardthai.com/menu",
 		image: [
-			"https://theyardthai.com/images/logo/logowithbackground.webp",
-			"https://theyardthai.com/images/logo/theyardheropicture.webp",
+			"https://theyardthai.com/images/logo/FullLogo.png",
+			"https://theyardthai.com/images/logo/theyardheropicture.jpg",
 		],
 		logo: "https://theyardthai.com/images/logo/FullLogo.png",
 		sameAs: [],
