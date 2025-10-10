@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 				url: "https://theyardthai.com/images/logo/logowithbackground.webp",
 				width: 1200,
 				height: 630,
-				alt: "The Yard Thai Cuisine - Delicious Thai food including pad thai, curry, and fresh vegetables",
+				alt: "The Yard Thai Cuisine - Authentic Thai restaurant logo",
 			},
 		],
 		locale: "en_US",
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
 		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills",
 		description:
 			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine in Agoura Hills, CA. Fresh ingredients, traditional recipes, and exceptional taste.",
-		images: ["https://theyardthai.com/images/logo/theyardheropicture.webp"],
+		images: ["https://theyardthai.com/images/logo/logowithbackground.webp"],
 	},
 	verification: {
 		google: "your-google-verification-code", // Replace with actual verification code
