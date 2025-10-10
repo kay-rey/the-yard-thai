@@ -37,7 +37,7 @@ export default function Navbar() {
 			{/* Main navbar content */}
 			<div className="flex h-16 items-center justify-between px-4 md:px-6">
 				{/* Logo and Status */}
-				<div className="flex items-center space-x-4">
+				<div className="flex items-center space-x-0 md:space-x-4">
 					<Link
 						href="/"
 						className="flex items-center space-x-3"
