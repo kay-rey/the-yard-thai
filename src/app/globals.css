@@ -306,3 +306,46 @@
 .scroll-animate.delay-700 {
 	transition-delay: 0.7s;
 }
+
+/* Wiggle animation for hero arrow */
+@keyframes wiggle {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-2px);
+	}
+	75% {
+		transform: translateX(2px);
+	}
+}
+
+.animate-wiggle {
+	animation: wiggle 1.5s ease-in-out infinite;
+}
+
+/* Subtle shake animation for navbar order button */
+@keyframes subtle-shake {
+	0%,
+	95%,
+	96% {
+		transform: translateX(-1px);
+	}
+	97% {
+		transform: translateX(1px);
+	}
+	98% {
+		transform: translateX(-1px);
+	}
+	99% {
+		transform: translateX(1px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.animate-subtle-shake {
+	animation: subtle-shake 5s ease-in-out infinite;
+}

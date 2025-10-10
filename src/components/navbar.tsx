@@ -81,7 +81,12 @@ export default function Navbar() {
 						<Phone className="h-4 w-4" />
 						<span>Call (818) 532-7272</span>
 					</Button>
-					<Button variant="default" asChild className="text-lg font-bold">
+					<Button
+						variant="default"
+						asChild
+						className="text-lg font-bold"
+						id="desktop-order-btn"
+					>
 						<Link
 							href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
 							target="_blank"
@@ -102,7 +107,12 @@ export default function Navbar() {
 						<Phone className="h-4 w-4" />
 						<span>Call</span>
 					</Button>
-					<Button variant="default" asChild className="text-lg font-bold">
+					<Button
+						variant="default"
+						asChild
+						className="text-lg font-bold"
+						id="mobile-order-btn"
+					>
 						<Link
 							href="https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd"
 							target="_blank"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Nunito_Sans, Parisienne } from "next/font/google";
 import LocalFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -83,42 +84,58 @@ export default function RootLayout({
 				<main>{children}</main>
 				<Footer />
 				<Analytics />
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-							// Scroll-triggered animations using Intersection Observer
-							function initScrollAnimations() {
-								if (!('IntersectionObserver' in window)) return;
-								
-								const observer = new IntersectionObserver(
-									(entries) => {
-										entries.forEach((entry) => {
-											if (entry.isIntersecting) {
-												entry.target.classList.add('in-view');
-												observer.unobserve(entry.target);
-											}
-										});
-									},
-									{
-										threshold: 0.2,
-										rootMargin: '0px 0px -50px 0px',
-									}
-								);
-								
-								const animatedElements = document.querySelectorAll('.scroll-animate');
-								animatedElements.forEach((element) => {
-									observer.observe(element);
-								});
-							}
+				<Script id="animations-script" strategy="afterInteractive">
+					{`
+						// Scroll-triggered animations using Intersection Observer
+						function initScrollAnimations() {
+							if (!('IntersectionObserver' in window)) return;
 							
-							if (document.readyState === 'loading') {
-								document.addEventListener('DOMContentLoaded', initScrollAnimations);
-							} else {
-								initScrollAnimations();
+							const observer = new IntersectionObserver(
+								(entries) => {
+									entries.forEach((entry) => {
+										if (entry.isIntersecting) {
+											entry.target.classList.add('in-view');
+											observer.unobserve(entry.target);
+										}
+									});
+								},
+								{
+									threshold: 0.2,
+									rootMargin: '0px 0px -50px 0px',
+								}
+							);
+							
+							const animatedElements = document.querySelectorAll('.scroll-animate');
+							animatedElements.forEach((element) => {
+								observer.observe(element);
+							});
+						}
+						
+						// Add navbar button animations after hydration
+						function initNavbarAnimations() {
+							const desktopBtn = document.getElementById('desktop-order-btn');
+							const mobileBtn = document.getElementById('mobile-order-btn');
+							
+							if (desktopBtn) {
+								desktopBtn.classList.add('animate-subtle-shake');
 							}
-						`,
-					}}
-				/>
+							if (mobileBtn) {
+								mobileBtn.classList.add('animate-subtle-shake');
+							}
+						}
+						
+						function initAllAnimations() {
+							initScrollAnimations();
+							initNavbarAnimations();
+						}
+						
+						if (document.readyState === 'loading') {
+							document.addEventListener('DOMContentLoaded', initAllAnimations);
+						} else {
+							initAllAnimations();
+						}
+					`}
+				</Script>
 			</body>
 		</html>
 	);

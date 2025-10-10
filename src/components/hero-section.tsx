@@ -107,7 +107,7 @@ export default function HeroSection() {
 								className="flex items-center gap-2"
 							>
 								Order Online
-								<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 group-hover:translate-x-1 transition-transform" />
+								<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 group-hover:translate-x-1 transition-transform animate-wiggle" />
 							</Link>
 						</Button>
 						<Button
