@@ -43,10 +43,10 @@ export default function MenuSection() {
 			: categories.filter((c) => c.id === selectedCategory);
 
 	return (
-		<section className="py-2 md:py-3">
+		<section>
 			<div className="container mx-auto px-4">
 				{/* Category Filter */}
-				<div className="flex flex-wrap justify-center gap-2 mb-8">
+				<div className="flex flex-wrap justify-center gap-2">
 					<Button
 						variant={selectedCategory === "all" ? "default" : "outline"}
 						onClick={() => setSelectedCategory("all")}

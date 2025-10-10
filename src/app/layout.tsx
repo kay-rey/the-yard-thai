@@ -86,16 +86,23 @@ export default function RootLayout({
 				<Analytics />
 				<Script id="animations-script" strategy="afterInteractive">
 					{`
+						let scrollObserver = null;
+						
 						// Scroll-triggered animations using Intersection Observer
 						function initScrollAnimations() {
 							if (!('IntersectionObserver' in window)) return;
 							
-							const observer = new IntersectionObserver(
+							// Clean up existing observer
+							if (scrollObserver) {
+								scrollObserver.disconnect();
+							}
+							
+							scrollObserver = new IntersectionObserver(
 								(entries) => {
 									entries.forEach((entry) => {
 										if (entry.isIntersecting) {
 											entry.target.classList.add('in-view');
-											observer.unobserve(entry.target);
+											scrollObserver.unobserve(entry.target);
 										}
 									});
 								},
@@ -105,9 +112,11 @@ export default function RootLayout({
 								}
 							);
 							
+							// Reset all scroll-animate elements and observe them
 							const animatedElements = document.querySelectorAll('.scroll-animate');
 							animatedElements.forEach((element) => {
-								observer.observe(element);
+								element.classList.remove('in-view');
+								scrollObserver.observe(element);
 							});
 						}
 						
@@ -129,11 +138,34 @@ export default function RootLayout({
 							initNavbarAnimations();
 						}
 						
+						// Initialize on page load
 						if (document.readyState === 'loading') {
 							document.addEventListener('DOMContentLoaded', initAllAnimations);
 						} else {
 							initAllAnimations();
 						}
+						
+						// Re-initialize on URL changes (Next.js routing)
+						let currentPath = window.location.pathname;
+						const checkForRouteChange = () => {
+							if (window.location.pathname !== currentPath) {
+								currentPath = window.location.pathname;
+								// Only re-initialize if we're on the homepage
+								if (currentPath === '/') {
+									setTimeout(initAllAnimations, 100);
+								}
+							}
+						};
+						
+						// Check for route changes periodically
+						setInterval(checkForRouteChange, 100);
+						
+						// Also re-initialize when the page becomes visible again
+						document.addEventListener('visibilitychange', () => {
+							if (!document.hidden && window.location.pathname === '/') {
+								setTimeout(initAllAnimations, 100);
+							}
+						});
 					`}
 				</Script>
 			</body>
