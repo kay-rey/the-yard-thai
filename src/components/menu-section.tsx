@@ -12,10 +12,16 @@ import {
 	DialogTitle,
 } from "@/components/ui/dialog";
 import React from "react";
-import { menuItems, categories, type MenuItem } from "@/lib/menu-data";
+import { getCategories, type MenuItem } from "@/lib/menu-data";
 import { MenuItemCard } from "@/components/menu-item-card";
+import { urlFor } from "@/sanity/lib/image";
+import { formatPrice } from "@/lib/price-format";
 
-export default function MenuSection() {
+interface MenuSectionProps {
+	menuItems: MenuItem[];
+}
+
+export default function MenuSection({ menuItems }: MenuSectionProps) {
 	const [selectedCategory, setSelectedCategory] = useState("all");
 	const [selectedMenuItem, setSelectedMenuItem] = useState<MenuItem | null>(
 		null
@@ -35,8 +41,9 @@ export default function MenuSection() {
 			grouped[item.category].push(item);
 		}
 		return grouped;
-	}, [selectedCategory]);
+	}, [selectedCategory, menuItems]);
 
+	const categories = getCategories();
 	const categoriesToRender =
 		selectedCategory === "all"
 			? categories
@@ -103,7 +110,7 @@ export default function MenuSection() {
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
 									{categoryItems.map((item) => (
 										<MenuItemCard
-											key={item.id}
+											key={item._id}
 											item={item}
 											onClick={() => setSelectedMenuItem(item)}
 										/>
@@ -173,8 +180,11 @@ export default function MenuSection() {
 										className="relative w-full lg:w-1/2 rounded-xl overflow-hidden aspect-[4/3] lg:aspect-square"
 									>
 										<Image
-											src={selectedMenuItem.image}
-											alt={selectedMenuItem.name}
+											src={urlFor(selectedMenuItem.image)
+												.width(800)
+												.height(600)
+												.url()}
+											alt={selectedMenuItem.imageAlt || selectedMenuItem.name}
 											fill
 											className="object-cover"
 											sizes="(max-width: 1024px) 90vw, 50vw"
@@ -189,7 +199,7 @@ export default function MenuSection() {
 								>
 									<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 										<div className="text-3xl font-bold text-primary">
-											{selectedMenuItem.price}
+											{formatPrice(selectedMenuItem.price)}
 										</div>
 										<div className="flex flex-wrap gap-2">
 											{selectedMenuItem.popular && (

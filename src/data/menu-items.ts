@@ -1,6 +1,17 @@
-import { MenuItem } from "@/lib/menu-data";
+// Legacy interface for migration - matches the old structure
+interface LegacyMenuItem {
+	id: string;
+	name: string;
+	description: string;
+	price: string;
+	category: string;
+	spicy?: boolean;
+	vegetarian?: boolean;
+	popular?: boolean;
+	image?: string;
+}
 
-export const menuItems: MenuItem[] = [
+export const menuItems: LegacyMenuItem[] = [
 	// Appetizers
 	{
 		id: "edamame",

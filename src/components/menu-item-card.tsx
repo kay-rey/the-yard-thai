@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { MenuItem } from "@/lib/menu-data";
+import { urlFor } from "@/sanity/lib/image";
+import { formatPrice } from "@/lib/price-format";
 
 interface MenuItemCardProps {
 	item: MenuItem;
@@ -17,8 +19,8 @@ export function MenuItemCard({ item, onClick }: MenuItemCardProps) {
 			{item.image && (
 				<div className="relative h-48 w-full">
 					<Image
-						src={item.image}
-						alt={item.name}
+						src={urlFor(item.image).width(400).height(300).url()}
+						alt={item.imageAlt || item.name}
 						fill
 						className="object-cover"
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -48,7 +50,9 @@ export function MenuItemCard({ item, onClick }: MenuItemCardProps) {
 						)}
 					</div>
 				</div>
-				<div className="text-primary font-bold text-xl">{item.price}</div>
+				<div className="text-primary font-bold text-xl">
+					{formatPrice(item.price)}
+				</div>
 			</CardHeader>
 			<CardContent className="px-6 pb-6">
 				<p className="text-muted-foreground text-sm leading-relaxed">

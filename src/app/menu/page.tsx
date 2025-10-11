@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import MenuSection from "@/components/menu-section";
+import { getMenuItems } from "@/lib/menu-data";
 
 export const metadata: Metadata = {
 	title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
@@ -39,7 +40,13 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function MenuPage() {
+// Static page - no revalidation needed
+// Menu updates only when you manually redeploy or restart the server
+// This prevents any background fetching while users are browsing
+
+export default async function MenuPage() {
+	const menuItems = await getMenuItems();
+
 	return (
 		<div className="min-h-screen bg-background">
 			{/* Hero Section */}
@@ -56,7 +63,7 @@ export default function MenuPage() {
 			</section>
 
 			{/* Menu Content */}
-			<MenuSection />
+			<MenuSection menuItems={menuItems} />
 		</div>
 	);
 }

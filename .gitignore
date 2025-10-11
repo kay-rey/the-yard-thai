@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env.local
 
 # vercel
 .vercel
@@ -41,6 +42,7 @@ yarn-error.log*
 next-env.d.ts
 
 diff.txt
+status.txt
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,nextjs,zsh,jetbrains
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,nextjs,zsh,jetbrains
