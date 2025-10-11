@@ -123,7 +123,7 @@ export default function MenuSection({ menuItems }: MenuSectionProps) {
 
 				{/* Order Online CTA */}
 				<div className="text-center mt-16">
-					<Card className="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
+					<Card className="max-w-2xl mx-auto mb-12 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
 						<CardContent className="py-8">
 							<h3 className="text-2xl font-bold text-foreground mb-4">
 								Ready to Order?
