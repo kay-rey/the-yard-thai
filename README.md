@@ -7,6 +7,7 @@
   [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
   [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+  [![Sanity](https://img.shields.io/badge/Sanity-4-FF3E00?style=for-the-badge&logo=sanity)](https://sanity.io/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
   
   *A modern, responsive website for The Yard Thai Cuisine restaurant located in Agoura Hills, California*
@@ -36,6 +37,8 @@ A modern, responsive website for The Yard Thai Cuisine restaurant located in Ago
 ### Technical Features
 
 - **Modern Stack**: Next.js 15 with App Router, React 19, TypeScript
+- **Headless CMS**: Sanity.io integration with custom schema and studio
+- **Content Management**: Non-technical user-friendly content editing interface
 - **Styling**: Tailwind CSS with custom Thai-inspired color palette
 - **UI Components**: shadcn/ui components with custom styling
 - **Icons**: Lucide React icons for consistent iconography
@@ -106,6 +109,10 @@ pnpm start
 
 # Run ESLint
 pnpm lint
+
+# Sanity CMS Management
+pnpm migrate          # Migrate existing menu data to Sanity
+pnpm delete-menu     # Delete all menu items from Sanity (cleanup)
 ```
 
 ## 📁 Project Structure
@@ -117,6 +124,8 @@ src/
 │   ├── layout.tsx         # Root layout with metadata and fonts
 │   ├── page.tsx           # Homepage
 │   ├── menu/              # Menu page
+│   ├── studio/            # Sanity Studio integration
+│   │   └── [[...tool]]/   # Catch-all route for Sanity Studio
 │   ├── fonts/             # Local font files
 │   ├── robots.ts          # SEO robots configuration
 │   └── sitemap.ts         # Dynamic sitemap generation
@@ -129,9 +138,15 @@ src/
 │   ├── menu-item-card.tsx # Individual menu item card
 │   ├── navbar.tsx         # Navigation component
 │   └── footer.tsx         # Footer component
-├── data/                  # Static data
+├── data/                  # Static data (legacy)
 │   ├── categories.ts      # Menu categories
 │   └── menu-items.ts      # Complete menu data
+├── sanity/                # Sanity CMS configuration
+│   ├── schemaTypes/       # Content schemas
+│   │   ├── index.ts       # Schema exports
+│   │   └── menuItem.ts     # Menu item schema definition
+│   ├── env.ts            # Sanity environment configuration
+│   └── structure.ts       # Studio structure configuration
 └── lib/                   # Utility functions
     ├── menu-data.ts       # Menu data types and utilities
     ├── store-hours.ts     # Store hours and status logic
@@ -164,6 +179,76 @@ The website features a comprehensive menu system with:
 11. **Drinks** - Beverages and Thai drinks
 12. **Desserts** - Traditional Thai desserts
 13. **Sides** - Accompaniments and extras
+
+## 🎛️ Content Management System (Sanity.io)
+
+### Headless CMS Integration
+
+This project features a sophisticated **Sanity.io** headless CMS implementation, demonstrating full-stack development capabilities:
+
+#### **Custom Schema Design**
+
+- **Menu Item Schema**: Comprehensive data model with validation
+- **Category Management**: 13 predefined categories with dropdown selection
+- **Image Handling**: Sanity CDN integration with automatic optimization
+- **Content Validation**: Required fields, price validation, and data integrity
+- **Slug Generation**: Auto-generated URL-friendly identifiers
+
+#### **Sanity Studio Features**
+
+- **Embedded Studio**: Accessible at `/studio` route for content management
+- **Category Organization**: Visual menu organization with emoji icons
+- **Rich Previews**: Live preview of menu items with images and metadata
+- **Bulk Management**: Efficient content editing workflows
+- **User-Friendly Interface**: Non-technical users can manage content easily
+
+#### **Technical Implementation**
+
+```typescript
+// Custom Schema with Validation
+defineField({
+	name: "price",
+	title: "Price",
+	type: "number",
+	validation: (Rule) => Rule.required().min(0).precision(2),
+}),
+	// Category Selection with Options
+	defineField({
+		name: "category",
+		title: "Category",
+		type: "string",
+		options: {
+			list: [
+				{ title: "Appetizers", value: "appetizers" },
+				{ title: "Soups", value: "soups" },
+				// ... 13 categories total
+			],
+			layout: "dropdown",
+		},
+	});
+```
+
+#### **Performance Optimizations**
+
+- **ISR (Incremental Static Regeneration)**: Pages regenerate when content changes
+- **Image Optimization**: Automatic WebP conversion and responsive sizing
+- **CDN Integration**: Global content delivery for fast loading
+- **Smart Caching**: Optimized caching strategies for performance
+
+#### **Migration & Data Management**
+
+- **Automated Migration**: Scripts to transfer existing menu data to Sanity
+- **Image Upload**: Batch upload of existing food photography
+- **Data Preservation**: Maintains all existing relationships and metadata
+- **Environment Management**: Secure API token handling
+
+### CMS Architecture Benefits
+
+- **Scalability**: Easy to add new content types and fields
+- **Developer Experience**: Type-safe content queries with GROQ
+- **Content Editor Experience**: Intuitive interface for non-technical users
+- **Performance**: Optimized content delivery and caching
+- **Flexibility**: Easy to extend with additional content types
 
 ## 🕒 Store Hours & Status
 
@@ -236,7 +321,15 @@ The application can be deployed to any platform that supports Next.js:
 - **Prettier**: Code formatting (if configured)
 - **Conventional Commits**: Standardized commit messages
 
-### Adding New Menu Items
+### Content Management with Sanity
+
+1. **Access Studio**: Navigate to `/studio` in your browser
+2. **Add Menu Items**: Use the intuitive interface to create new items
+3. **Upload Images**: Drag and drop images with automatic optimization
+4. **Set Categories**: Choose from predefined categories with validation
+5. **Manage Content**: Edit, delete, and organize menu items efficiently
+
+### Adding New Menu Items (Legacy)
 
 1. Edit `src/data/menu-items.ts`
 2. Add the new item with proper structure
@@ -248,6 +341,13 @@ The application can be deployed to any platform that supports Next.js:
 1. Edit `src/app/globals.css`
 2. Update CSS custom properties
 3. Ensure accessibility compliance
+
+### Sanity CMS Setup
+
+1. **Environment Variables**: Set up `.env.local` with Sanity credentials
+2. **Migration**: Run `pnpm migrate` to transfer existing data
+3. **Studio Access**: Visit `/studio` to manage content
+4. **Schema Customization**: Modify `src/sanity/schemaTypes/menuItem.ts`
 
 ## 📱 Browser Support
 
