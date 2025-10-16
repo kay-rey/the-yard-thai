@@ -25,6 +25,7 @@ export default function FeaturedSection() {
 								width={300}
 								height={192}
 								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+								placeholder="blur"
 							/>
 						</div>
 						<CardContent className="p-4">
@@ -43,6 +44,7 @@ export default function FeaturedSection() {
 								width={300}
 								height={192}
 								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+								placeholder="blur"
 							/>
 						</div>
 						<CardContent className="p-4">
@@ -61,6 +63,7 @@ export default function FeaturedSection() {
 								width={300}
 								height={192}
 								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+								placeholder="blur"
 							/>
 						</div>
 						<CardContent className="p-4">
@@ -79,6 +82,7 @@ export default function FeaturedSection() {
 								width={300}
 								height={192}
 								className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+								placeholder="blur"
 							/>
 						</div>
 						<CardContent className="p-4">

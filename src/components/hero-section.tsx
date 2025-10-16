@@ -15,6 +15,7 @@ export default function HeroSection() {
 					className="object-cover"
 					priority
 					sizes="100vw"
+					placeholder="blur"
 				/>
 				{/* Gradient Overlay */}
 				<div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/50" />
