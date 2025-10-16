@@ -5,7 +5,7 @@ import { getMenuItems } from "@/lib/menu-data";
 export const metadata: Metadata = {
 	title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
 	description:
-		"Explore our authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste at The Yard Thai Cuisine in Agoura Hills.",
+		"Explore our 4.5-star rated authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste at The Yard Thai Cuisine, a women-owned and operated restaurant in Agoura Hills.",
 	keywords: [
 		"Thai menu",
 		"pad thai menu",
@@ -17,26 +17,38 @@ export const metadata: Metadata = {
 		"Agoura Hills menu",
 		"traditional Thai dishes",
 		"Thai cuisine menu",
+		"Khao Soi Curry Noodle",
+		"Pad See Eiw",
+		"Tom Kha Soup",
+		"Pad Kee Mao",
+		"Papaya Salad",
+		"Pineapple Fried Rice",
+		"Yellow Curry",
+		"Green Curry",
+		"Spicy Eggplant",
+		"Crab Fried Rice",
+		"women-owned restaurant",
+		"women-owned business",
 	],
 	openGraph: {
 		title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
 		description:
-			"Explore our authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste.",
+			"Explore our 4.5-star rated authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste at our women-owned and operated restaurant.",
 		url: "https://theyardthai.com/menu",
 		images: [
 			{
-				url: "https://theyardthai.com/images/logo/FullLogo.png",
+				url: "https://theyardthai.com/images/logo/hero.jpg",
 				width: 1200,
 				height: 630,
-				alt: "The Yard Thai Cuisine - Authentic Thai restaurant logo",
+				alt: "The Yard Thai Cuisine - Authentic Thai restaurant with delicious Pad Thai",
 			},
 		],
 	},
 	twitter: {
 		title: "Menu - Authentic Thai Cuisine | The Yard Thai Cuisine",
 		description:
-			"Explore our authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste.",
-		images: ["https://theyardthai.com/images/logo/FullLogo.png"],
+			"Explore our 4.5-star rated authentic Thai menu featuring pad thai, curries, noodles, and traditional dishes. Fresh ingredients, traditional recipes, and exceptional taste at our women-owned and operated restaurant.",
+		images: ["https://theyardthai.com/images/logo/hero.jpg"],
 	},
 };
 

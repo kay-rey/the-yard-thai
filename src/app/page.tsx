@@ -6,7 +6,7 @@ import FeaturedSection from "@/components/featured-section";
 export const metadata: Metadata = {
 	title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills, CA",
 	description:
-		"Experience the best authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste. Located at 5889 Kanan Rd. Call (818) 532-7272 for reservations.",
+		"Experience the best 4.5-star rated authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine, a women-owned and operated restaurant. Fresh ingredients, traditional recipes, and exceptional taste. Located at 5889 Kanan Rd. Call (818) 532-7272 to order.",
 	keywords: [
 		"Thai restaurant Agoura Hills",
 		"best Thai food near me",
@@ -18,26 +18,38 @@ export const metadata: Metadata = {
 		"restaurant reservations",
 		"family Thai restaurant",
 		"traditional Thai recipes",
+		"Westlake Village Thai",
+		"Calabasas Thai food",
+		"Ventura County restaurant",
+		"Malibu Thai cuisine",
+		"Khao Soi Curry Noodle",
+		"Pad See Eiw",
+		"Tom Kha Soup",
+		"Pad Kee Mao",
+		"Papaya Salad",
+		"Pineapple Fried Rice",
+		"women-owned restaurant",
+		"women-owned business",
 	],
 	openGraph: {
 		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills, CA",
 		description:
-			"Experience the best authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
+			"Experience the best 4.5-star rated authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine, a women-owned and operated restaurant. Fresh ingredients, traditional recipes, and exceptional taste.",
 		url: "https://theyardthai.com",
 		images: [
 			{
-				url: "https://theyardthai.com/images/logo/FullLogo.png",
+				url: "https://theyardthai.com/images/logo/hero.jpg",
 				width: 1200,
 				height: 630,
-				alt: "The Yard Thai Cuisine - Authentic Thai restaurant logo",
+				alt: "The Yard Thai Cuisine - Authentic Thai restaurant with delicious Pad Thai",
 			},
 		],
 	},
 	twitter: {
 		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills, CA",
 		description:
-			"Experience the best authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
-		images: ["https://theyardthai.com/images/logo/FullLogo.png"],
+			"Experience the best 4.5-star rated authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine, a women-owned and operated restaurant. Fresh ingredients, traditional recipes, and exceptional taste.",
+		images: ["https://theyardthai.com/images/logo/hero.jpg"],
 	},
 };
 

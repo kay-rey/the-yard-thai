@@ -47,10 +47,10 @@ export function generateRestaurantStructuredData() {
 
 	return {
 		"@context": "https://schema.org",
-		"@type": "Restaurant",
+		"@type": ["Restaurant", "LocalBusiness"],
 		name: "The Yard Thai Cuisine",
 		description:
-			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine. Fresh ingredients, traditional recipes, and exceptional taste.",
+			"Experience authentic Thai flavors with a modern twist at The Yard Thai Cuisine, a women-owned and operated restaurant. Fresh ingredients, traditional recipes, and exceptional taste.",
 		url: "https://theyardthai.com",
 		telephone: "(818) 532-7272",
 		address: {
@@ -170,16 +170,92 @@ export function generateRestaurantStructuredData() {
 		priceRange: "$$",
 		acceptsReservations: true,
 		hasMenu: "https://theyardthai.com/menu",
+		paymentAccepted: ["Cash", "Credit Card"],
+		amenityFeature: [
+			{
+				"@type": "LocationFeatureSpecification",
+				name: "Outdoor Seating",
+				value: true,
+			},
+			{
+				"@type": "LocationFeatureSpecification",
+				name: "Takeout",
+				value: true,
+			},
+			{
+				"@type": "LocationFeatureSpecification",
+				name: "Delivery",
+				value: true,
+			},
+			{
+				"@type": "LocationFeatureSpecification",
+				name: "Women-Owned Business",
+				value: true,
+			},
+		],
+		hasMenuItem: [
+			{
+				"@type": "MenuItem",
+				name: "Khao Soi Curry Noodle",
+				description: "Traditional Northern Thai curry noodle soup",
+			},
+			{
+				"@type": "MenuItem",
+				name: "Pad See Eiw",
+				description: "Stir-fried wide rice noodles with soy sauce",
+			},
+			{
+				"@type": "MenuItem",
+				name: "Tom Kha Soup",
+				description: "Coconut milk soup with galangal and lemongrass",
+			},
+			{
+				"@type": "MenuItem",
+				name: "Pad Kee Mao",
+				description: "Drunken noodles with basil and chili",
+			},
+		],
 		image: [
 			"https://theyardthai.com/images/logo/FullLogo.png",
 			"https://theyardthai.com/images/logo/theyardheropicture.jpg",
 		],
 		logo: "https://theyardthai.com/images/logo/FullLogo.png",
-		sameAs: [],
+		sameAs: [
+			"https://www.instagram.com/theyardthaicuisine/",
+			"https://www.yelp.com/biz/the-yard-thai-cuisine-agoura-hills",
+		],
 		aggregateRating: {
 			"@type": "AggregateRating",
 			ratingValue: "4.5",
 			reviewCount: "238",
 		},
+	};
+}
+
+export function generateBreadcrumbStructuredData(pathname: string) {
+	const baseUrl = "https://theyardthai.com";
+
+	const breadcrumbs = [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Home",
+			item: baseUrl,
+		},
+	];
+
+	if (pathname === "/menu") {
+		breadcrumbs.push({
+			"@type": "ListItem",
+			position: 2,
+			name: "Menu",
+			item: `${baseUrl}/menu`,
+		});
+	}
+
+	return {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: breadcrumbs,
 	};
 }
