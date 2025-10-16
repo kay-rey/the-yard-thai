@@ -181,8 +181,9 @@ export default function MenuSection({ menuItems }: MenuSectionProps) {
 									>
 										<Image
 											src={urlFor(selectedMenuItem.image)
-												.width(800)
-												.height(600)
+												.width(1200)
+												.height(900)
+												.quality(95)
 												.url()}
 											alt={selectedMenuItem.imageAlt || selectedMenuItem.name}
 											fill

@@ -19,7 +19,7 @@ export function MenuItemCard({ item, onClick }: MenuItemCardProps) {
 			{item.image && (
 				<div className="relative h-48 w-full">
 					<Image
-						src={urlFor(item.image).width(400).height(300).url()}
+						src={urlFor(item.image).width(800).height(600).quality(90).url()}
 						alt={item.imageAlt || item.name}
 						fill
 						className="object-cover"
