@@ -199,10 +199,8 @@ export default function RootLayout({
 						const checkForRouteChange = () => {
 							if (window.location.pathname !== currentPath) {
 								currentPath = window.location.pathname;
-								// Only re-initialize if we're on the homepage
-								if (currentPath === '/') {
-									setTimeout(initAllAnimations, 100);
-								}
+								// Re-initialize animations for all pages
+								setTimeout(initAllAnimations, 100);
 							}
 						};
 						
@@ -211,7 +209,7 @@ export default function RootLayout({
 						
 						// Also re-initialize when the page becomes visible again
 						document.addEventListener('visibilitychange', () => {
-							if (!document.hidden && window.location.pathname === '/') {
+							if (!document.hidden) {
 								setTimeout(initAllAnimations, 100);
 							}
 						});

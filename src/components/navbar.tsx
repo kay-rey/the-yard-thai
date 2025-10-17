@@ -99,6 +99,17 @@ export default function Navbar() {
 						<Link href="/menu">Menu</Link>
 					</Button>
 					<Button
+						variant="link"
+						asChild
+						className={`text-lg font-bold ${
+							pathname === "/catering"
+								? "text-primary underline"
+								: "text-foreground hover:text-primary"
+						}`}
+					>
+						<Link href="/catering">Catering</Link>
+					</Button>
+					<Button
 						variant="outline"
 						onClick={handleCallClick}
 						className="text-lg font-bold flex items-center space-x-2 cursor-pointer"
@@ -185,6 +196,18 @@ export default function Navbar() {
 						onClick={handleLinkClick}
 					>
 						<Link href="/menu">Menu</Link>
+					</Button>
+					<Button
+						variant="link"
+						asChild
+						className={`w-full justify-start text-lg font-bold ${
+							pathname === "/catering"
+								? "text-primary underline"
+								: "text-foreground hover:text-primary"
+						}`}
+						onClick={handleLinkClick}
+					>
+						<Link href="/catering">Catering</Link>
 					</Button>
 					<Button
 						variant="outline"

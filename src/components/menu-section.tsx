@@ -189,7 +189,6 @@ export default function MenuSection({ menuItems }: MenuSectionProps) {
 											fill
 											className="object-cover"
 											sizes="(max-width: 1024px) 90vw, 50vw"
-											placeholder="blur"
 										/>
 									</div>
 								)}

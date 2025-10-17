@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/hero-section";
 import AboutSection from "@/components/about-section";
 import FeaturedSection from "@/components/featured-section";
+import CateringSection from "@/components/catering-section";
 
 export const metadata: Metadata = {
 	title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills, CA",
 	description:
-		"Experience the best 4.5-star rated authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine, a women-owned and operated restaurant. Fresh ingredients, traditional recipes, and exceptional taste. Located at 5889 Kanan Rd. Call (818) 532-7272 to order.",
+		"Experience the best 4.5-star rated authentic Thai cuisine in Agoura Hills at The Yard Thai Cuisine, a women-owned and operated restaurant. Fresh ingredients, traditional recipes, and exceptional taste. Located at 5889 Kanan Rd. Call (818) 532-7272 to order. Professional catering services available for special events.",
 	keywords: [
 		"Thai restaurant Agoura Hills",
 		"best Thai food near me",
@@ -30,6 +31,21 @@ export const metadata: Metadata = {
 		"Pineapple Fried Rice",
 		"women-owned restaurant",
 		"women-owned business",
+		"Thai catering Agoura Hills",
+		"corporate catering California",
+		"private party catering",
+		"special event catering",
+		"Thai food catering",
+		"authentic Thai catering",
+		"event catering Agoura Hills",
+		"wedding catering Thai",
+		"business catering",
+		"party catering Thai cuisine",
+		"catering services Agoura Hills",
+		"Thai restaurant catering",
+		"custom menu catering",
+		"professional catering",
+		"catering delivery",
 	],
 	openGraph: {
 		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills, CA",
@@ -59,6 +75,7 @@ export default function Home() {
 			<HeroSection />
 			<AboutSection />
 			<FeaturedSection />
+			<CateringSection />
 		</div>
 	);
 }
