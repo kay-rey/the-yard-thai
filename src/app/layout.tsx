@@ -119,14 +119,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head>
-				<link
-					rel="preload"
-					as="image"
-					href="/images/logo/hero.jpg"
-					type="image/jpeg"
-				/>
-			</head>
+			<head></head>
 			<body
 				className={`${lora.variable} ${nunitoSans.variable} ${myFont.variable} ${parisienne.variable} antialiased`}
 			>

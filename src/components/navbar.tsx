@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -15,9 +15,20 @@ import { getStoreStatus } from "@/lib/store-hours";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [storeStatus, setStoreStatus] = useState({
+		status: "loading",
+		isOpen: false,
+		text: "Loading...",
+		circleColor: "bg-gray-500",
+		textColor: "text-gray-600",
+		textColorFooter: "text-gray-400",
+	});
 	const pathname = usePathname();
 
-	const storeStatus = getStoreStatus();
+	// Update store status on client side to avoid hydration mismatch
+	useEffect(() => {
+		setStoreStatus(getStoreStatus());
+	}, []);
 
 	const handleLinkClick = () => {
 		setIsOpen(false);
