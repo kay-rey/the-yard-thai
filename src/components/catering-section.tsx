@@ -87,8 +87,8 @@ export default function CateringSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-200 ">
 						<CardContent className="p-6 text-center">
 							<div className="mb-4 flex justify-center">
-								<div className="p-3 rounded-full bg-secondary/10">
-									<Calendar className="h-8 w-8 text-secondary" />
+								<div className="p-3 rounded-full bg-primary/10">
+									<Calendar className="h-8 w-8 text-primary" />
 								</div>
 							</div>
 							<h3 className="text-xl font-medium mb-2 text-accent">
@@ -104,8 +104,8 @@ export default function CateringSection() {
 					<Card className="group hover:shadow-lg transition-shadow duration-200 ">
 						<CardContent className="p-6 text-center">
 							<div className="mb-4 flex justify-center">
-								<div className="p-3 rounded-full bg-accent/10">
-									<Utensils className="h-8 w-8 text-accent" />
+								<div className="p-3 rounded-full bg-primary/10">
+									<Utensils className="h-8 w-8 text-primary" />
 								</div>
 							</div>
 							<h3 className="text-xl font-medium mb-2 text-accent">
