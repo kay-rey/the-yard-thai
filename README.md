@@ -3,10 +3,10 @@
   
   # The Yard Thai Cuisine Website
   
-  [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+  [![Next.js](https://img.shields.io/badge/Next.js-15.5.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-  [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+  [![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
   [![Sanity](https://img.shields.io/badge/Sanity-4-FF3E00?style=for-the-badge&logo=sanity)](https://sanity.io/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
   
@@ -15,7 +15,24 @@
 
 ---
 
-A modern, responsive website for The Yard Thai Cuisine restaurant located in Agoura Hills, California. Built with Next.js 15, TypeScript, and Tailwind CSS, featuring a comprehensive menu system, real-time store hours, and optimized performance.
+A modern, responsive website for The Yard Thai Cuisine restaurant located in Agoura Hills, California. Built with Next.js 15.5.3, TypeScript, and Tailwind CSS, featuring a comprehensive menu system powered by Sanity CMS, real-time store hours, and optimized performance.
+
+## 🎯 Project Status
+
+**Current Version**: 0.1.0  
+**Last Updated**: December 2024  
+**Status**: Production Ready ✅  
+**Live Website**: [https://www.theyardthai.com/](https://www.theyardthai.com/)
+
+### Recent Updates
+
+- ✅ **Sanity CMS Integration**: Complete headless CMS implementation
+- ✅ **shadcn/ui Components**: Modern component library integration
+- ✅ **Turbopack Support**: Faster development builds
+- ✅ **TypeScript 5**: Latest type safety features
+- ✅ **Tailwind CSS 4**: Updated styling framework
+- ✅ **Performance Optimization**: Image optimization and caching
+- ✅ **SEO Enhancement**: Structured data and meta tags
 
 ## 🌟 Features
 
@@ -36,8 +53,8 @@ A modern, responsive website for The Yard Thai Cuisine restaurant located in Ago
 
 ### Technical Features
 
-- **Modern Stack**: Next.js 15 with App Router, React 19, TypeScript
-- **Headless CMS**: Sanity.io integration with custom schema and studio
+- **Modern Stack**: Next.js 15.5.3 with App Router and Turbopack, React 19.1.0, TypeScript 5
+- **Headless CMS**: Sanity.io 4 integration with custom schema and studio
 - **Content Management**: Non-technical user-friendly content editing interface
 - **Styling**: Tailwind CSS with custom Thai-inspired color palette
 - **UI Components**: shadcn/ui components with custom styling
@@ -95,25 +112,54 @@ The website uses a carefully crafted Thai-inspired color scheme:
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000) to see the website.
 
+### Live Website
+
+🌐 **Production Site**: [https://www.theyardthai.com/](https://www.theyardthai.com/)
+
+The live website showcases the complete implementation with:
+
+- Real-time store hours and status
+- Full menu with Sanity CMS integration
+- Optimized performance and SEO
+- Mobile-responsive design
+
 ### Available Scripts
 
 ```bash
-# Development server with Turbopack
+# Development server with Turbopack (faster builds)
 pnpm dev
 
-# Production build with Turbopack
+# Production build
 pnpm build
 
 # Start production server
 pnpm start
 
-# Run ESLint
+# Run ESLint for code quality
 pnpm lint
 
 # Sanity CMS Management
 pnpm migrate          # Migrate existing menu data to Sanity
 pnpm delete-menu     # Delete all menu items from Sanity (cleanup)
 ```
+
+### Development Workflow
+
+1. **Start Development**: `pnpm dev` - Runs with Turbopack for faster builds
+2. **Content Management**: Access Sanity Studio at `/studio` for menu management
+3. **Code Quality**: `pnpm lint` ensures consistent code style
+4. **Build & Deploy**: `pnpm build` creates optimized production build
+
+### Key Dependencies
+
+- **Next.js 15.5.3** - React framework with App Router
+- **React 19.1.0** - Latest React with concurrent features
+- **TypeScript 5** - Type-safe development
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Sanity 4** - Headless CMS with real-time collaboration
+- **shadcn/ui** - Modern component library
+- **Lucide React** - Beautiful icon library
+- **Vercel Analytics** - Performance monitoring
 
 ## 📁 Project Structure
 
@@ -128,9 +174,17 @@ src/
 │   │   └── [[...tool]]/   # Catch-all route for Sanity Studio
 │   ├── fonts/             # Local font files
 │   ├── robots.ts          # SEO robots configuration
-│   └── sitemap.ts         # Dynamic sitemap generation
+│   ├── sitemap.ts         # Dynamic sitemap generation
+│   ├── favicon.ico        # Site favicon
+│   ├── icon.png           # App icon
+│   └── opengraph-image.webp # Open Graph image
 ├── components/            # React components
 │   ├── ui/                # shadcn/ui components
+│   │   ├── badge.tsx      # Badge component
+│   │   ├── button.tsx     # Button component
+│   │   ├── card.tsx       # Card component
+│   │   ├── collapsible.tsx # Collapsible component
+│   │   └── dialog.tsx     # Dialog component
 │   ├── hero-section.tsx   # Homepage hero section
 │   ├── about-section.tsx  # About restaurant section
 │   ├── featured-section.tsx # Featured menu items
@@ -141,17 +195,31 @@ src/
 ├── data/                  # Static data (legacy)
 │   ├── categories.ts      # Menu categories
 │   └── menu-items.ts      # Complete menu data
+├── lib/                   # Utility functions
+│   ├── menu-data.ts       # Menu data types and utilities
+│   ├── price-format.ts    # Price formatting utilities
+│   ├── store-hours.ts     # Store hours and status logic
+│   ├── structured-data.ts # SEO structured data
+│   ├── utils.ts           # General utilities
+│   └── sanity/            # Sanity CMS utilities
+│       ├── config.ts      # Sanity configuration
+│       ├── queries.ts     # GROQ queries
+│       ├── client.ts      # Sanity client
+│       ├── image.ts       # Image utilities
+│       └── live.ts        # Live preview utilities
 ├── sanity/                # Sanity CMS configuration
 │   ├── schemaTypes/       # Content schemas
 │   │   ├── index.ts       # Schema exports
-│   │   └── menuItem.ts     # Menu item schema definition
+│   │   └── menuItem.ts    # Menu item schema definition
 │   ├── env.ts            # Sanity environment configuration
-│   └── structure.ts       # Studio structure configuration
-└── lib/                   # Utility functions
-    ├── menu-data.ts       # Menu data types and utilities
-    ├── store-hours.ts     # Store hours and status logic
-    ├── structured-data.ts # SEO structured data
-    └── utils.ts           # General utilities
+│   ├── structure.ts       # Studio structure configuration
+│   └── lib/               # Sanity utilities
+│       ├── client.ts      # Sanity client
+│       ├── image.ts       # Image utilities
+│       └── live.ts        # Live preview utilities
+└── scripts/               # Utility scripts
+    ├── migrate-to-sanity.ts # Data migration script
+    └── delete-all-menu-items.ts # Cleanup script
 ```
 
 ## 🍽️ Menu System
@@ -297,20 +365,35 @@ The website includes real-time store status functionality:
 
 The easiest way to deploy is using Vercel:
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically with each push
+1. **Push to GitHub**: Ensure your code is in a GitHub repository
+2. **Connect to Vercel**: Link your repository to Vercel
+3. **Configure Environment Variables**: Set up Sanity credentials
+4. **Deploy**: Automatic deployments with each push
 
-Simply connect your GitHub repository to Vercel for automatic deployments.
+**Environment Variables Required:**
+
+```bash
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_API_READ_TOKEN=your_read_token
+```
+
+### Deployment Features
+
+- **Automatic Deployments**: Every push to main branch triggers deployment
+- **Preview Deployments**: Pull requests get preview URLs
+- **Edge Functions**: Global CDN for optimal performance
+- **Analytics**: Built-in performance monitoring
+- **Custom Domain**: Easy domain configuration
 
 ### Other Platforms
 
 The application can be deployed to any platform that supports Next.js:
 
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
+- **Netlify** - Static site hosting with serverless functions
+- **AWS Amplify** - Full-stack deployment with AWS integration
+- **Railway** - Simple deployment with database support
+- **DigitalOcean App Platform** - Container-based deployment
 
 ## 🛠️ Development
 
@@ -377,8 +460,4 @@ This project is open-sourced to showcase modern web development skills and best 
 
 - **Address**: 5889 Kanan Rd, Agoura Hills, CA
 - **Phone**: (818) 532-7272
-- **Website**: [theyardthai.com](https://theyardthai.com)
-
----
-
-Built with ❤️ for authentic Thai cuisine lovers in Agoura Hills, California.
+- **Website**: [https://www.theyardthai.com/](https://www.theyardthai.com/)
