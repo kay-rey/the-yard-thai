@@ -1,7 +1,34 @@
 {
 	"name": "the-yard-thai-website",
-	"version": "0.1.0",
+	"version": "1.0.0",
+	"description": "A modern, responsive website for The Yard Thai Cuisine restaurant in Agoura Hills, CA. Built with Next.js, TypeScript, and Sanity CMS.",
 	"private": true,
+	"author": {
+		"name": "Kevin Baltazar Reyes",
+		"email": "kayreydev@gmail.com",
+		"url": "https://kevbreyes.com"
+	},
+	"homepage": "https://www.theyardthai.com/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kay-rey/the-yard-thai.git"
+	},
+	"keywords": [
+		"nextjs",
+		"react",
+		"typescript",
+		"tailwindcss",
+		"sanity-cms",
+		"restaurant-website",
+		"responsive-design",
+		"thai-cuisine",
+		"agoura-hills"
+	],
+	"license": "MIT",
+	"engines": {
+		"node": ">=18.0.0",
+		"pnpm": ">=8.0.0"
+	},
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
