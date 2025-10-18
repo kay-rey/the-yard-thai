@@ -47,7 +47,7 @@ export default function CateringPageContent() {
 			<section className="py-8 px-4 md:px-6 lg:px-8 bg-muted/50">
 				<div className="mx-auto max-w-6xl">
 					<div className="text-center mb-12">
-						<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance">
+						<h2 className="text-center mb-6 text-3xl text-accent sm:text-4xl lg:text-5xl">
 							Our Catering Services
 						</h2>
 						<p className="text-lg text-muted-foreground text-balance">
@@ -134,7 +134,7 @@ export default function CateringPageContent() {
 				<div className="mx-auto max-w-6xl">
 					{/* Header */}
 					<div className="text-center mb-12">
-						<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance">
+						<h2 className="text-center mb-6 text-3xl text-accent sm:text-4xl lg:text-5xl">
 							Why Choose Our Catering?
 						</h2>
 					</div>
@@ -225,7 +225,7 @@ export default function CateringPageContent() {
 			<section className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-background to-primary/5">
 				<div className="mx-auto max-w-4xl text-center">
 					<div className="mb-8">
-						<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance">
+						<h2 className="text-center mb-6 text-3xl text-accent sm:text-4xl lg:text-5xl">
 							Ready to Plan Your Event?
 						</h2>
 						<p className="text-lg text-muted-foreground text-balance">
@@ -236,8 +236,9 @@ export default function CateringPageContent() {
 
 					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 						<Button
+							variant="default"
 							asChild
-							className="text-lg font-bold bg-accent/90 hover:bg-accent flex items-center space-x-2 px-8 py-3"
+							className="text-lg font-bold flex items-center space-x-2 px-8 py-3"
 						>
 							<Link href="tel:+18185327272">
 								<Phone className="h-5 w-5" />

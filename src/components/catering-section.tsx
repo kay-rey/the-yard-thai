@@ -6,11 +6,11 @@ import { Phone, Users, Calendar, Utensils } from "lucide-react";
 
 export default function CateringSection() {
 	return (
-		<section className="pt-16 pb-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background">
+		<section className="pt-8 pb-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background">
 			<div className="mx-auto max-w-6xl">
 				{/* Header */}
-				<div className="text-center mb-12">
-					<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance">
+				<div className="text-center mb-6">
+					<h2 className="text-4xl md:text-5xl lg:text-6xl text-accent mb-4 text-balance">
 						Catering & Special Events
 					</h2>
 					<p className="text-lg text-muted-foreground text-balance">

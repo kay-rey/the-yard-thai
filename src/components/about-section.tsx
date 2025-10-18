@@ -20,7 +20,7 @@ export default function AboutSection() {
 
 					{/* Right Column - Content */}
 					<div className="order-1 lg:order-2 flex flex-col justify-center">
-						<h2 className="text-center mb-6 text-3xl text-accent sm:text-4xl lg:text-5xl scroll-animate slide-in-up delay-100">
+						<h2 className="text-center mb-4 text-4xl md:text-5xl lg:text-6xl text-accent text-balance scroll-animate slide-in-up delay-100">
 							Our Story
 						</h2>
 

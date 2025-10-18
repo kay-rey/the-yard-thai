@@ -7,8 +7,8 @@ export default function FeaturedSection() {
 	return (
 		<section className="pt-8 pb-16 px-4 bg-muted/50">
 			<div className="max-w-6xl mx-auto">
-				<div className="text-center mb-12">
-					<h2 className="text-3xl md:text-4xl text-accent mb-4 text-balance scroll-animate slide-in-up delay-100">
+				<div className="text-center mb-6">
+					<h2 className="text-4xl md:text-5xl lg:text-6xl text-accent mb-4 text-balance scroll-animate slide-in-up delay-100">
 						Featured Dishes
 					</h2>
 					<p className="text-lg text-muted-foreground text-balance scroll-animate slide-in-up delay-200">
