@@ -53,11 +53,11 @@ export default function MenuSection({ menuItems }: MenuSectionProps) {
 		<section>
 			<div className="container mx-auto px-4">
 				{/* Category Filter */}
-				<div className="flex flex-wrap justify-center gap-2">
+				<div className="flex flex-wrap justify-center gap-1 sm:gap-2">
 					<Button
 						variant={selectedCategory === "all" ? "default" : "outline"}
 						onClick={() => setSelectedCategory("all")}
-						className={`mb-2 transition-all duration-200 ${
+						className={`mb-1 sm:mb-2 transition-all duration-200 ${
 							selectedCategory === "all"
 								? "bg-primary text-primary-foreground shadow-md"
 								: "bg-white border-2 border-primary/20 text-charcoal hover:border-primary hover:bg-warm-amber/12 hover:text-charcoal hover:shadow-lg"
@@ -74,7 +74,7 @@ export default function MenuSection({ menuItems }: MenuSectionProps) {
 									selectedCategory === category.id ? "default" : "outline"
 								}
 								onClick={() => setSelectedCategory(category.id)}
-								className={`mb-2 transition-all duration-200 ${
+								className={`mb-1 sm:mb-2 transition-all duration-200 ${
 									selectedCategory === category.id
 										? "bg-primary text-primary-foreground shadow-md"
 										: "bg-white border-2 border-primary/20 text-charcoal hover:border-primary hover:bg-warm-amber/12 hover:text-charcoal hover:shadow-lg"
