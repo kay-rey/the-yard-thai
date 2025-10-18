@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Utensils } from "lucide-react";
 
 export default function FeaturedSection() {
 	return (
@@ -94,9 +95,12 @@ export default function FeaturedSection() {
 					<Button
 						variant="default"
 						asChild
-						className="text-lg font-bold bg-accent/90"
+						className="w-full sm:w-auto text-lg font-bold bg-primary hover:bg-primary/90 flex items-center space-x-2"
 					>
-						<Link href="/menu">View Full Menu</Link>
+						<Link href="/menu" className="flex items-center space-x-2">
+							<Utensils className="h-5 w-5" />
+							<span>View Full Menu</span>
+						</Link>
 					</Button>
 				</div>
 			</div>

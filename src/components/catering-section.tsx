@@ -53,8 +53,9 @@ export default function CateringSection() {
 						{/* Call to Action */}
 						<div className="mt-8">
 							<Button
+								variant="default"
 								asChild
-								className="text-lg font-medium bg-accent/90 hover:bg-accent flex items-center space-x-2"
+								className="text-lg font-bold flex items-center space-x-2"
 							>
 								<Link href="tel:+18185327272">
 									<Phone className="h-5 w-5" />
