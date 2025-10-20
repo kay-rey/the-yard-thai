@@ -24,8 +24,8 @@ export default function CateringSection() {
 					<div className="order-2 lg:order-1 flex items-center">
 						<div className="relative h-80 w-full overflow-hidden rounded-lg lg:h-96">
 							<Image
-								src="/images/interior/IMG_6899.jpeg"
-								alt="Beautiful restaurant interior perfect for special events and catering"
+								src="/images/catering/catering-spread.JPG"
+								alt="Beautiful catering spread showcasing our authentic Thai cuisine for special events"
 								fill
 								className="object-cover object-center"
 								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

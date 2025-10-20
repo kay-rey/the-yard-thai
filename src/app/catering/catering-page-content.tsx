@@ -10,6 +10,7 @@ import {
 	CheckCircle,
 	Star,
 } from "lucide-react";
+import CateringGallery from "@/components/catering-gallery";
 
 export default function CateringPageContent() {
 	return (
@@ -205,21 +206,11 @@ export default function CateringPageContent() {
 							</p>
 						</div>
 					</div>
-
-					{/* Image Section */}
-					<div className="mt-16">
-						<div className="relative h-64 md:h-80 lg:h-96 w-full overflow-hidden rounded-lg">
-							<Image
-								src="/images/interior/IMG_6962.jpeg"
-								alt="Professional catering setup showcasing our attention to detail and presentation"
-								fill
-								className="object-cover object-center"
-								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-							/>
-						</div>
-					</div>
 				</div>
 			</section>
+
+			{/* Gallery Section */}
+			<CateringGallery />
 
 			{/* Call to Action */}
 			<section className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-background to-primary/5">
