@@ -33,8 +33,8 @@ export default function CateringPageContent() {
 				<div className="container mx-auto">
 					<div className="relative h-80 md:h-96 lg:h-[500px] w-full overflow-hidden rounded-lg">
 						<Image
-							src="/images/interior/IMG_6891.jpeg"
-							alt="Beautiful restaurant interior showcasing our elegant dining space perfect for special events"
+							src="/images/catering/catering-spread.JPG"
+							alt="Beautiful catering spread showcasing our authentic Thai cuisine for special events and celebrations"
 							fill
 							className="object-cover object-center"
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"

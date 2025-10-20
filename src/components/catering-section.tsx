@@ -1,15 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Users, Calendar, Utensils } from "lucide-react";
+import CateringCarousel from "@/components/catering-carousel";
 
 export default function CateringSection() {
 	return (
-		<section className="pt-8 pb-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background">
+		<section className="pt-4 pb-8 px-4 md:pt-8 md:pb-16 md:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background">
 			<div className="mx-auto max-w-6xl">
 				{/* Header */}
-				<div className="text-center mb-6">
+				<div className="text-center mb-4 md:mb-6">
 					<h2 className="text-4xl md:text-5xl lg:text-6xl text-accent mb-4 text-balance">
 						Catering & Special Events
 					</h2>
@@ -19,18 +19,10 @@ export default function CateringSection() {
 				</div>
 
 				{/* Main Content Grid */}
-				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 mb-12">
-					{/* Left Column - Image */}
-					<div className="order-2 lg:order-1 flex items-center">
-						<div className="relative h-80 w-full overflow-hidden rounded-lg lg:h-96">
-							<Image
-								src="/images/catering/catering-spread.JPG"
-								alt="Beautiful catering spread showcasing our authentic Thai cuisine for special events"
-								fill
-								className="object-cover object-center"
-								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-							/>
-						</div>
+				<div className="grid grid-cols-1 gap-4 md:gap-8 lg:grid-cols-2 lg:gap-12 mb-6 md:mb-12">
+					{/* Left Column - Carousel */}
+					<div className="order-2 lg:order-1 flex items-center min-h-[300px] md:min-h-[400px]">
+						<CateringCarousel />
 					</div>
 
 					{/* Right Column - Content */}
