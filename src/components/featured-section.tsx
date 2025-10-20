@@ -95,7 +95,7 @@ export default function FeaturedSection() {
 					<Button
 						variant="default"
 						asChild
-						className="w-full sm:w-auto text-lg font-bold bg-primary hover:bg-primary/90 flex items-center space-x-2"
+						className="w-full md:w-auto text-lg font-bold bg-primary hover:bg-primary/90 inline-flex items-center space-x-2"
 					>
 						<Link href="/menu" className="flex items-center space-x-2">
 							<Utensils className="h-5 w-5" />

@@ -43,11 +43,11 @@ export default function CateringSection() {
 						</div>
 
 						{/* Call to Action */}
-						<div className="mt-8">
+						<div className="text-center mt-8">
 							<Button
 								variant="default"
 								asChild
-								className="text-lg font-bold flex items-center space-x-2"
+								className="w-full md:w-auto text-lg font-bold inline-flex items-center space-x-2"
 							>
 								<Link href="tel:+18185327272">
 									<Phone className="h-5 w-5" />
