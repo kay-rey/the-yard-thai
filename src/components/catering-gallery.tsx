@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import {
 	Dialog,
@@ -74,8 +73,6 @@ const cateringImages = [
 ];
 
 export default function CateringGallery() {
-	const [selectedImage, setSelectedImage] = useState<number | null>(null);
-
 	return (
 		<div className="py-8 px-4 md:px-6 lg:px-8">
 			<div className="mx-auto max-w-6xl">
