@@ -30,7 +30,7 @@ export default function StudioPage() {
 				overflow: "hidden",
 			}}
 		>
-			<NextStudio config={config} unstable_noAuthBoundary />
+			<NextStudio config={config} />
 		</div>
 	);
 }
