@@ -71,14 +71,6 @@ export const metadata: Metadata = {
 			"max-snippet": -1,
 		},
 	},
-	icons: {
-		icon: [
-			{ url: "/images/logo/FullLogo.ico", sizes: "any" },
-			{ url: "/images/logo/FullLogo.png", sizes: "32x32", type: "image/png" },
-			{ url: "/images/logo/FullLogo.webp", sizes: "16x16", type: "image/webp" },
-		],
-		apple: "/images/logo/FullLogo.png",
-	},
 	openGraph: {
 		title: "The Yard Thai Cuisine - Authentic Thai Food in Agoura Hills",
 		description:
