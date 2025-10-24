@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -25,10 +25,35 @@ export default function Navbar() {
 	});
 	const pathname = usePathname();
 
+	// Ref for the menu container
+	const menuRef = useRef<HTMLDivElement>(null);
+
+	// Memoized handler for click outside detection
+	const handleClickOutside = useCallback((event: MouseEvent | TouchEvent) => {
+		if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+			setIsOpen(false);
+		}
+	}, []);
+
 	// Update store status on client side to avoid hydration mismatch
 	useEffect(() => {
 		setStoreStatus(getStoreStatus());
 	}, []);
+
+	// Handle click outside to close mobile menu
+	useEffect(() => {
+		if (!isOpen) return;
+
+		// Add event listeners for both mouse and touch events
+		document.addEventListener("mousedown", handleClickOutside);
+		document.addEventListener("touchstart", handleClickOutside);
+
+		// Cleanup function to remove event listeners
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+			document.removeEventListener("touchstart", handleClickOutside);
+		};
+	}, [isOpen, handleClickOutside]);
 
 	const handleLinkClick = () => {
 		setIsOpen(false);
@@ -41,6 +66,7 @@ export default function Navbar() {
 
 	return (
 		<Collapsible
+			ref={menuRef}
 			open={isOpen}
 			onOpenChange={setIsOpen}
 			className="sticky top-0 z-50 w-full border-b bg-background"
