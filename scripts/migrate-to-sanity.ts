@@ -85,7 +85,7 @@ async function createMenuItem(item: MenuItem): Promise<void> {
 			}),
 		};
 
-		const result = await client.create(document);
+		await client.create(document);
 		console.log(`✅ Created menu item: ${item.name}`);
 	} catch (error) {
 		console.error(`❌ Failed to create menu item ${item.name}:`, error);

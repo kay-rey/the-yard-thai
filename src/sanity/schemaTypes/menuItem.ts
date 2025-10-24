@@ -74,8 +74,8 @@ export default defineType({
 					input
 						.toLowerCase()
 						.replace(/\s+/g, "-")
-						.replace(/[^\w\-]+/g, "")
-						.replace(/\-\-+/g, "-")
+						.replace(/[^\w-]+/g, "")
+						.replace(/--+/g, "-")
 						.replace(/^-+/, "")
 						.replace(/-+$/, ""),
 			},
