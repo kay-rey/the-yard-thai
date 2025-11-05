@@ -32,6 +32,10 @@ export default [
 				URL: "readonly",
 				HTMLDivElement: "readonly",
 				HTMLButtonElement: "readonly",
+				// DOM types
+				MouseEvent: "readonly",
+				TouchEvent: "readonly",
+				Node: "readonly",
 				// Node.js globals
 				process: "readonly",
 				setTimeout: "readonly",
