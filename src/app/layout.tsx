@@ -7,6 +7,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { generateRestaurantStructuredData } from "@/lib/structured-data";
+import { SanityLive } from "@/sanity/lib/live";
 
 const myFont = LocalFont({
 	src: "./fonts/coolvetica-rg.otf",
@@ -125,6 +126,7 @@ export default function RootLayout({
 				<main>{children}</main>
 				<Footer />
 				<Analytics />
+				<SanityLive />
 				<Script id="animations-script" strategy="afterInteractive">
 					{`
 						let scrollObserver = null;
