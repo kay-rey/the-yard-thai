@@ -12,7 +12,8 @@ import {
 	DialogTitle,
 } from "@/components/ui/dialog";
 import React from "react";
-import { getCategories, type MenuItem } from "@/lib/menu-data";
+import { type MenuItem } from "@/lib/menu-data";
+import { categories } from "@/data/categories";
 import { MenuItemCard } from "@/components/menu-item-card";
 import { urlFor } from "@/sanity/lib/image";
 import { formatPrice } from "@/lib/price-format";
@@ -43,7 +44,7 @@ export default function MenuSection({ menuItems }: MenuSectionProps) {
 		return grouped;
 	}, [selectedCategory, menuItems]);
 
-	const categories = getCategories();
+	// Categories are imported directly from data file to avoid importing server-only code in client component
 	const categoriesToRender =
 		selectedCategory === "all"
 			? categories
