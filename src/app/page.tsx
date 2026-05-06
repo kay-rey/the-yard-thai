@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/hero-section";
+import MothersDaySection from "@/components/mothers-day-section";
 import AboutSection from "@/components/about-section";
 import FeaturedSection from "@/components/featured-section";
 import CateringSection from "@/components/catering-section";
@@ -73,6 +74,7 @@ export default function Home() {
 	return (
 		<div>
 			<HeroSection />
+			<MothersDaySection />
 			<AboutSection />
 			<FeaturedSection />
 			<CateringSection />
