@@ -8,7 +8,10 @@ const TOAST_ORDER_URL =
 
 export default function MothersDaySection() {
 	return (
-		<section className="pt-8 pb-8 px-4 md:pt-12 md:pb-16 md:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/50">
+		<section
+			id="mothers-day"
+			className="scroll-mt-24 pt-8 pb-8 px-4 md:pt-12 md:pb-16 md:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/50"
+		>
 			<div className="mx-auto max-w-6xl">
 				<div className="text-center mb-6 md:mb-8">
 					<div className="mb-3 flex justify-center">
