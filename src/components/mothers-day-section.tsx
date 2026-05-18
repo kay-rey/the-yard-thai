@@ -25,6 +25,10 @@ export default function MothersDaySection() {
 					<h2 className="text-4xl md:text-5xl lg:text-6xl text-accent mb-4 text-balance scroll-animate slide-in-up delay-100">
 						Celebrate Mother&apos;s Day With Us
 					</h2>
+					<p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto scroll-animate slide-in-up delay-200">
+						Treat Mom to authentic Thai flavors, fresh ingredients, and a warm
+						welcome at The Yard Thai Cuisine in Agoura Hills.
+					</p>
 				</div>
 
 				<div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2 lg:gap-12 mb-8">
@@ -34,17 +38,13 @@ export default function MothersDaySection() {
 					<div className="order-1 lg:order-2 flex flex-col justify-center">
 						<div className="space-y-4 text-muted-foreground">
 							<p className="text-lg leading-relaxed scroll-animate slide-in-up delay-200">
-							On Mother&apos;s Day, every mom who joins us for dine-in receives a
-							special treat from our kitchen—our way of saying thank you.
+								Whether you&apos;re planning a family dinner or ordering her
+								favorites to enjoy at home, we&apos;d love to be part of your
+								Mother&apos;s Day.
 							</p>
 							<p className="text-lg leading-relaxed scroll-animate slide-in-up delay-200">
-								Whether you&apos;re gathering the family at our tables or
-								ordering her favorites to enjoy at home, we&apos;d love to be
-								part of your Mother&apos;s Day.
-							</p>
-							<p className="text-lg leading-relaxed scroll-animate slide-in-up delay-200">
-								Reserve a table or stop by for dine-in, or order online for
-								pickup and delivery—call us with any questions.
+								Order online for pickup or delivery, or call us to ask about
+								dine-in and how we can make the day special.
 							</p>
 						</div>
 						<div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-start">

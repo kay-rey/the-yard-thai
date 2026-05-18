@@ -21,7 +21,7 @@ const TOAST_ORDER_URL =
 
 const PROMO_IMAGE = {
 	src: "/images/mother's-day/33475354-5F67-45E3-90A1-2960EB1B4745.JPG",
-	alt: "Mother's Day at The Yard Thai Cuisine — every mom dining in receives a treat",
+	alt: "Mother's Day at The Yard Thai Cuisine — celebrate with authentic Thai food in Agoura Hills",
 	width: 1581,
 	height: 2048,
 } as const;
@@ -88,9 +88,8 @@ export default function MothersDayPromoDialog() {
 							Celebrate Mother&apos;s Day With Us
 						</DialogTitle>
 						<DialogDescription className="text-base text-muted-foreground text-pretty">
-							This Mother&apos;s Day, every mom who dines in with us gets a
-							special treat on the house. Enjoy authentic Thai flavors—order
-							online, call, or join us at the restaurant.
+							Treat Mom to authentic Thai flavors at The Yard Thai Cuisine —
+							order online, call us, or dine in this Mother&apos;s Day.
 						</DialogDescription>
 					</DialogHeader>
 					<div className="flex flex-col gap-2">
