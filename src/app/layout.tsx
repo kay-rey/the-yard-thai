@@ -5,7 +5,6 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import MothersDayPromoDialog from "@/components/mothers-day-promo-dialog";
 import { Analytics } from "@vercel/analytics/next";
 import { generateRestaurantStructuredData } from "@/lib/structured-data";
 import { SanityLive } from "@/sanity/lib/live";
@@ -124,7 +123,6 @@ export default function RootLayout({
 					}}
 				/>
 				<Navbar />
-				<MothersDayPromoDialog />
 				<main>{children}</main>
 				<Footer />
 				<Analytics />
