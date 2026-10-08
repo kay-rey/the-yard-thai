@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			url: `${baseUrl}/menu`,
 			lastModified: currentDate,
 			changeFrequency: "monthly",
+			priority: 0.9,
+		},
+		{
+			url: `${baseUrl}/catering`,
+			lastModified: currentDate,
+			changeFrequency: "monthly",
 			priority: 0.8,
 		},
 	];

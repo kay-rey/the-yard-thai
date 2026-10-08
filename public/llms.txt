@@ -1,0 +1,28 @@
+# The Yard Thai Cuisine
+
+> Women-owned Thai restaurant in Agoura Hills, CA serving authentic Thai cuisine with fresh ingredients and traditional recipes.
+
+The Yard Thai Cuisine is a neighborhood Thai restaurant at 5889 Kanan Rd, Agoura Hills, CA 91301. Call (818) 532-7272 to order or inquire about catering. Online ordering is available via Toast.
+
+## Pages
+
+- [Home](https://theyardthai.com/): Restaurant overview, featured dishes, and location highlights
+- [Menu](https://theyardthai.com/menu): Full menu of Thai appetizers, soups, curries, noodles, rice, and desserts
+- [Catering](https://theyardthai.com/catering): Catering for corporate events, private parties, and special occasions
+
+## Contact & ordering
+
+- Phone: (818) 532-7272
+- Address: 5889 Kanan Rd, Agoura Hills, CA 91301
+- [Order online](https://www.toasttab.com/local/order/the-yard-thai-cuisine-5889-kanan-rd)
+
+## Hours (Pacific Time)
+
+- Mon–Thu: 11:00 AM–2:30 PM, 4:00 PM–8:15 PM
+- Fri–Sat: 11:00 AM–2:30 PM, 4:00 PM–8:30 PM
+- Sunday: 11:30 AM–2:30 PM, 4:00 PM–8:15 PM
+
+## Optional
+
+- [Sitemap](https://theyardthai.com/sitemap.xml)
+- [Robots](https://theyardthai.com/robots.txt)

@@ -1,47 +1,47 @@
 export function generateRestaurantStructuredData() {
-	// Store hours data for structured data - based on actual Yelp hours
+	// Store hours — keep in sync with src/lib/store-hours.ts and footer
 	const storeHours = {
 		monday: {
 			open1: "11:00",
 			close1: "14:30", // 11:00 AM - 2:30 PM
 			open2: "16:00",
-			close2: "20:30", // 4:00 PM - 8:30 PM
+			close2: "20:15", // 4:00 PM - 8:15 PM
 		},
 		tuesday: {
 			open1: "11:00",
 			close1: "14:30", // 11:00 AM - 2:30 PM
 			open2: "16:00",
-			close2: "20:30", // 4:00 PM - 8:30 PM
+			close2: "20:15", // 4:00 PM - 8:15 PM
 		},
 		wednesday: {
 			open1: "11:00",
 			close1: "14:30", // 11:00 AM - 2:30 PM
 			open2: "16:00",
-			close2: "20:30", // 4:00 PM - 8:30 PM
+			close2: "20:15", // 4:00 PM - 8:15 PM
 		},
 		thursday: {
 			open1: "11:00",
 			close1: "14:30", // 11:00 AM - 2:30 PM
 			open2: "16:00",
-			close2: "20:30", // 4:00 PM - 8:30 PM
+			close2: "20:15", // 4:00 PM - 8:15 PM
 		},
 		friday: {
 			open1: "11:00",
 			close1: "14:30", // 11:00 AM - 2:30 PM
 			open2: "16:00",
-			close2: "21:00", // 4:00 PM - 9:00 PM
+			close2: "20:30", // 4:00 PM - 8:30 PM
 		},
 		saturday: {
 			open1: "11:00",
 			close1: "14:30", // 11:00 AM - 2:30 PM
 			open2: "16:00",
-			close2: "20:45", // 4:00 PM - 8:45 PM
+			close2: "20:30", // 4:00 PM - 8:30 PM
 		},
 		sunday: {
 			open1: "11:30",
 			close1: "14:30", // 11:30 AM - 2:30 PM
 			open2: "16:00",
-			close2: "20:30", // 4:00 PM - 8:30 PM
+			close2: "20:15", // 4:00 PM - 8:15 PM
 		},
 	};
 
